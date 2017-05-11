@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
+
+    let countersManager = CountersManager.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,18 @@ class ViewController: UIViewController {
 
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+
+        countersManager.deleteAllEntries()
+
+        debugPrint("Number of counters: " + String(countersManager.counters.count))
+
+        if countersManager.counters.count == 0 {
+            countersManager.createCounter(counterName: "counter1")
+            countersManager.createCounter(counterName: "counter2")
+            countersManager.createCounter(counterName: "counter3")
+        }
+
+        debugPrint("Number of counters: " + String(countersManager.counters.count))
     }
 
     override func didReceiveMemoryWarning() {
