@@ -22,14 +22,28 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
 
-        countersManager.deleteAllEntries()
-
         debugPrint("Number of counters: " + String(countersManager.counters.count))
 
         if countersManager.counters.count == 0 {
             countersManager.createCounter(counterName: "counter1")
             countersManager.createCounter(counterName: "counter2")
             countersManager.createCounter(counterName: "counter3")
+            countersManager.createCounter(counterName: "counter4")
+            countersManager.createCounter(counterName: "counter5")
+            countersManager.createCounter(counterName: "counter6")
+            countersManager.createCounter(counterName: "counter7")
+            countersManager.createCounter(counterName: "counter8")
+            countersManager.createCounter(counterName: "counter9")
+            countersManager.createCounter(counterName: "counter10")
+            countersManager.createCounter(counterName: "counter11")
+            countersManager.createCounter(counterName: "counter12")
+            countersManager.createCounter(counterName: "counter13")
+            countersManager.createCounter(counterName: "counter14")
+            countersManager.createCounter(counterName: "counter15")
+            countersManager.createCounter(counterName: "counter16")
+            countersManager.createCounter(counterName: "counter17")
+            countersManager.createCounter(counterName: "counter18")
+            countersManager.createCounter(counterName: "counter19")
         }
 
         debugPrint("Number of counters: " + String(countersManager.counters.count))
@@ -62,23 +76,22 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 5
+            return countersManager.counters.count
         } else {
             return 1
         }
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "countertCell")
-        if indexPath.section == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "addCounterCell") as! AddNewCounterCell
-            return cell
-        }
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "countertCell") as! CounterCell
+        cell.counter = countersManager.counters[indexPath.row]
+        cell.titleLabel.text = countersManager.counters[indexPath.row].counterName
+        cell.countLabel.text = String(countersManager.counters[indexPath.row].count)
+        return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

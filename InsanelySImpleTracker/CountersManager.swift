@@ -10,33 +10,45 @@ import Foundation
 import RealmSwift
 
 class CountersManager {
-
+    
     static let sharedInstance = CountersManager()
-
+    
     var counters: [Counter] {
         let realm = try! Realm()
         return Array(realm.objects(Counter.self))
     }
-
-
+    
     func createCounter(counterName: String) {
-
         let counter = Counter()
         counter.counterName = counterName
         let realm = try! Realm()
-
         try! realm.write {
             realm.add(counter)
         }
-
     }
-
-
+    
     func deleteAllEntries() {
         let realm = try! Realm()
         try! realm.write {
             realm.deleteAll()
         }
     }
-
+    
+    func decreaseCoutnerValue ( counter: inout Counter) {
+        let realm = try! Realm()
+        try! realm.write {
+            counter.count -= 1
+        }
+        
+    }
+    
+    func increaseCoutnerValue ( counter: inout Counter) {
+        let realm = try! Realm()
+        try! realm.write {
+            counter.count += 1
+        }
+        
+    }
+    
+    
 }

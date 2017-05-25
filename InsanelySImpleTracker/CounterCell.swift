@@ -12,8 +12,10 @@ class CounterCell: UITableViewCell {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var countLabel: UILabel!
-    @IBOutlet var decreaseButton: UIButton!
-    @IBOutlet var increaseButton: UIButton!
+    @IBOutlet var decreaseButton: RoundedRectUIButton!
+    @IBOutlet var increaseButton: RoundedRectUIButton!
+    
+    var counter: Counter?
 
     var cellIdentifier = "countertCell"
 
@@ -22,19 +24,22 @@ class CounterCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
     @IBAction func decreaseButtonPressed(_ sender: UIButton) {
-        debugPrint("did press ddecrease button")
+        guard let counter = counter else {
+            return
+        }
+        CountersManager.sharedInstance.decreaseCoutnerValue(counter: &self.counter!)
+        countLabel.text = String(describing: counter.count)
     }
 
 
     @IBAction func incraseButtonPressed(_ sender: UIButton) {
-        debugPrint("did press increase button")
+        guard let counter = counter else {
+            return
+        }
+        CountersManager.sharedInstance.increaseCoutnerValue(counter: &self.counter!)
+        countLabel.text = String(describing: counter.count)
     }
 
 }

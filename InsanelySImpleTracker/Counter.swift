@@ -15,7 +15,8 @@ class Counter: Object {
     dynamic var counterName = ""
     dynamic var count = 0
     dynamic var creationDate = NSDate()
-
+    dynamic var counterNotes = ""
+    
     override static func primaryKey() -> String? {
         return "counterID"
     }
