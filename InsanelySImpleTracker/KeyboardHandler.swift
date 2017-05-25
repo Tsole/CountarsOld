@@ -47,7 +47,7 @@ extension KeyboardHandler where Self: UIViewController {
     
     func keyboardWillShow(_ notification: Notification) {
         
-        let verticalPadding: CGFloat = 5 // Padding between the bottom of the view and the top of the keyboard
+        let verticalPadding: CGFloat = 10 // Padding between the bottom of the view and the top of the keyboard
         
         guard let value = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue else { return }
         let keyboardHeight = value.cgRectValue.height
@@ -55,7 +55,7 @@ extension KeyboardHandler where Self: UIViewController {
         // Here you could have more complex rules, like checking if the textField currently selected is actually covered by the keyboard, but that's out of this scope.
         self.bottomConstraint.constant = keyboardHeight + verticalPadding
         
-        UIView.animate(withDuration: 0.1, animations: { () -> Void in
+        UIView.animate(withDuration: 0.2, animations: { () -> Void in
             self.view.layoutIfNeeded()
         })
     }
@@ -64,7 +64,7 @@ extension KeyboardHandler where Self: UIViewController {
     func keyboardWillHide(_ notification: Notification) {
         self.bottomConstraint.constant = 0
         
-        UIView.animate(withDuration: 0.1, animations: { () -> Void in
+        UIView.animate(withDuration: 0.2, animations: { () -> Void in
             self.view.layoutIfNeeded()
         })
     }
