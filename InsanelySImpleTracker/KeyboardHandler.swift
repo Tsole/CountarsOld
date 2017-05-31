@@ -47,7 +47,7 @@ extension KeyboardHandler where Self: UIViewController {
     
     func keyboardWillShow(_ notification: Notification) {
         
-        let verticalPadding: CGFloat = 10 // Padding between the bottom of the view and the top of the keyboard
+        let verticalPadding: CGFloat = 5 // Padding between the bottom of the view and the top of the keyboard
         
         guard let value = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue else { return }
         let keyboardHeight = value.cgRectValue.height

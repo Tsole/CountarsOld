@@ -11,9 +11,9 @@ import RealmSwift
 
 class Counter: Object {
     
-    dynamic var counterID = UUID().uuidString
     dynamic var counterName = ""
     dynamic var count = 0
+    dynamic var counterID = UUID().uuidString
     dynamic var creationDate = NSDate()
     dynamic var counterNotes = ""
     

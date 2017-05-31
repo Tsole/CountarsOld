@@ -8,42 +8,90 @@
 
 import UIKit
 
-class CounterDetailViewController: UIViewController, KeyboardHandler {
+class CounterDetailViewController: UITableViewController {
     
     @IBOutlet weak var renameTextField: UITextField!
-    @IBOutlet var textView: UIView!
-    
+    @IBOutlet weak var countTextfield: UITextField!
+    @IBOutlet var textView: UITextView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
-
+    
+    var counter: Counter?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         
-        startObservingKeyboardChanges()
-//        NotificationCenter.default.addObserver(self, selector: Selector(("keyboardWillShow:")), name:NSNotification.Name.UIKeyboardWillShow, object: nil);
-//        NotificationCenter.default.addObserver(self, selector: Selector(("keyboardWillHide:")), name:NSNotification.Name.UIKeyboardWillHide, object: nil);
+        textView.delegate = self
+        self.addDoneButtonOnKeyboard()
+        
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 50 // or something
+        
+        guard let counter = counter else {
+            return
+        }
+        
+        renameTextField.text = counter.counterName
+        countTextfield.text = String(describing: counter.count)
+        textView.text = counter.counterNotes
     }
     
+    
     override func viewWillDisappear(_ animated: Bool) {
-        stopObservingKeyboardChanges()
-
+        //        stopObservingKeyboardChanges()
+        
+        guard var counter = counter else {
+            return
+        }
+     CountersManager.sharedInstance.updateCounter(counter: &counter, counterName: renameTextField.text!, count: Int(countTextfield.text!)!, notes: textView.text)
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
-    */
+    
+    
+    //MARK: keyboard toolbar
+    func addDoneButtonOnKeyboard() {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        doneToolbar.barStyle       = UIBarStyle.default
+        let flexSpace              = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem  = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(self.doneButtonAction))
+        
+        var items = [UIBarButtonItem]()
+        items.append(flexSpace)
+        items.append(done)
+        
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        self.renameTextField.inputAccessoryView = doneToolbar
+        self.countTextfield.inputAccessoryView = doneToolbar
+        self.textView.inputAccessoryView = doneToolbar
+    }
+    
+    func doneButtonAction() {
+        self.renameTextField.resignFirstResponder()
+        self.countTextfield.resignFirstResponder()
+        self.textView.resignFirstResponder()
+    }
+}
 
+extension CounterDetailViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        let currentOffset = tableView.contentOffset
+        UIView.setAnimationsEnabled(false)
+        tableView.beginUpdates()
+        tableView.endUpdates()
+        UIView.setAnimationsEnabled(true)
+        tableView.setContentOffset(currentOffset, animated: false)
+    }
 }

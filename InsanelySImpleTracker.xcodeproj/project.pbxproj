@@ -10,6 +10,7 @@
 		AC0B21B51ED5A702003B0C68 /* RoundedRectUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B41ED5A702003B0C68 /* RoundedRectUIButton.swift */; };
 		AC0B21B71ED5BD08003B0C68 /* CounterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B61ED5BD08003B0C68 /* CounterDetailViewController.swift */; };
 		AC0B21B91ED5BDDA003B0C68 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B81ED5BDDA003B0C68 /* KeyboardHandler.swift */; };
+		AC99A7B41EDEB0BC007A82C0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */; };
 		ACC73B981E29610200B12544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC73B971E29610200B12544 /* AppDelegate.swift */; };
 		ACC73B9A1E29610200B12544 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC73B991E29610200B12544 /* MainViewController.swift */; };
 		ACC73B9D1E29610200B12544 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC73B9B1E29610200B12544 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		AC0B21B81ED5BDDA003B0C68 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		AC314DF81EC4BE390093C746 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Library/Developer/Xcode/DerivedData/InsanelySImpleTracker-aqonqgpphcftopgnesergsfqeyji/Build/Products/Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = "<group>"; };
 		AC314DF91EC4BE390093C746 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/InsanelySImpleTracker-aqonqgpphcftopgnesergsfqeyji/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
+		AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		ACC73B941E29610200B12544 /* InsanelySImpleTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InsanelySImpleTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC73B971E29610200B12544 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC73B991E29610200B12544 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				AC0B21B41ED5A702003B0C68 /* RoundedRectUIButton.swift */,
 				ACC73BC71E2A447900B12544 /* AddNewCounterCell.swift */,
 				ACD4067A1EC1FBA900DE08A3 /* Counter.swift */,
+				AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */,
 				ACC73B9B1E29610200B12544 /* Main.storyboard */,
 				ACC73B9E1E29610200B12544 /* Assets.xcassets */,
 				ACC73BA01E29610200B12544 /* LaunchScreen.storyboard */,
@@ -372,6 +375,7 @@
 				AC0B21B51ED5A702003B0C68 /* RoundedRectUIButton.swift in Sources */,
 				ACC73BC81E2A447900B12544 /* AddNewCounterCell.swift in Sources */,
 				ACC73B9A1E29610200B12544 /* MainViewController.swift in Sources */,
+				AC99A7B41EDEB0BC007A82C0 /* String+Extension.swift in Sources */,
 				ACC73B981E29610200B12544 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

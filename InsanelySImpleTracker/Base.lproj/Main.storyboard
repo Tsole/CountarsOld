@@ -6,9 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,8 +32,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="📙 Books read" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NE3-88-ijq" userLabel="titleLabel">
-                                                    <rect key="frame" x="16" y="19.5" width="203" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="📙 Books read" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NE3-88-ijq" userLabel="titleLabel">
+                                                    <rect key="frame" x="16" y="19.5" width="200" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -54,11 +51,6 @@
                                                             <state key="normal" title="-">
                                                                 <color key="titleColor" red="0.36044082045555115" green="0.5591769814491272" blue="0.86282825469970703" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             </state>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
-                                                                    <integer key="value" value="1"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
                                                             <connections>
                                                                 <action selector="decreaseButtonPressed:" destination="5ke-3J-uNU" eventType="touchUpInside" id="mV8-WG-qyX"/>
                                                             </connections>
@@ -84,17 +76,14 @@
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="pir-9A-yck"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ytL-mZ-rrX" firstAttribute="top" secondItem="guI-uf-fG3" secondAttribute="top" id="7ku-Yy-8YX"/>
                                                 <constraint firstAttribute="trailing" secondItem="ytL-mZ-rrX" secondAttribute="trailing" constant="8" id="8Mh-4v-Qcn"/>
-                                                <constraint firstItem="ytL-mZ-rrX" firstAttribute="leading" secondItem="NE3-88-ijq" secondAttribute="trailing" id="IrA-LE-dWV"/>
                                                 <constraint firstItem="NE3-88-ijq" firstAttribute="centerY" secondItem="guI-uf-fG3" secondAttribute="centerY" id="J0o-k4-c3w"/>
                                                 <constraint firstAttribute="bottom" secondItem="ytL-mZ-rrX" secondAttribute="bottom" id="Tef-Hb-xoY"/>
+                                                <constraint firstItem="ytL-mZ-rrX" firstAttribute="leading" secondItem="NE3-88-ijq" secondAttribute="trailing" constant="3" id="W64-H7-Hha"/>
                                                 <constraint firstItem="NE3-88-ijq" firstAttribute="leading" secondItem="guI-uf-fG3" secondAttribute="leading" constant="16" id="b3W-e2-GeF"/>
                                                 <constraint firstItem="ytL-mZ-rrX" firstAttribute="centerY" secondItem="guI-uf-fG3" secondAttribute="centerY" id="cV5-8d-yLr"/>
                                             </constraints>
@@ -105,47 +94,7 @@
                                             <outlet property="decreaseButton" destination="oxF-d1-7B4" id="gPw-mE-IyS"/>
                                             <outlet property="increaseButton" destination="40k-hl-y8x" id="n6y-zV-T3p"/>
                                             <outlet property="titleLabel" destination="NE3-88-ijq" id="cmh-Kg-LpI"/>
-                                            <segue destination="emf-0v-tyu" kind="show" id="5Db-2a-dAu"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="addCounterCell" rowHeight="80" id="Bif-cb-5ZO" customClass="AddNewCounterCell" customModule="InsanelySImpleTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="115.5" width="375" height="80"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bif-cb-5ZO" id="sgI-6G-AIT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="😉 add a new thing" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5r-gg-xKo">
-                                                    <rect key="frame" x="16" y="0.0" width="295" height="79"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyj-Ew-zcl">
-                                                    <rect key="frame" x="321" y="5" width="46" height="70"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="46" id="LKG-8Q-Z2c"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Add"/>
-                                                    <connections>
-                                                        <action selector="didPressAddButton:" destination="Bif-cb-5ZO" eventType="touchUpInside" id="KlU-bq-pp0"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="nyj-Ew-zcl" firstAttribute="firstBaseline" secondItem="b5r-gg-xKo" secondAttribute="baseline" id="OTd-5o-xxz"/>
-                                                <constraint firstItem="b5r-gg-xKo" firstAttribute="leading" secondItem="sgI-6G-AIT" secondAttribute="leading" constant="16" id="OXH-Po-CsC"/>
-                                                <constraint firstAttribute="bottom" secondItem="b5r-gg-xKo" secondAttribute="bottom" id="beF-CX-q7I"/>
-                                                <constraint firstItem="nyj-Ew-zcl" firstAttribute="trailing" secondItem="sgI-6G-AIT" secondAttribute="trailingMargin" id="d1v-zC-x2L"/>
-                                                <constraint firstItem="nyj-Ew-zcl" firstAttribute="top" secondItem="sgI-6G-AIT" secondAttribute="topMargin" constant="-3" id="ge7-1o-JIO"/>
-                                                <constraint firstItem="nyj-Ew-zcl" firstAttribute="baseline" secondItem="b5r-gg-xKo" secondAttribute="baseline" id="i1E-Ju-dhE"/>
-                                                <constraint firstItem="nyj-Ew-zcl" firstAttribute="leading" secondItem="b5r-gg-xKo" secondAttribute="trailing" constant="10" id="lVL-6M-khs"/>
-                                                <constraint firstItem="b5r-gg-xKo" firstAttribute="top" secondItem="sgI-6G-AIT" secondAttribute="top" id="wZw-ue-A7v"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="addButton" destination="nyj-Ew-zcl" id="Itw-Ba-GAt"/>
-                                            <outlet property="textField" destination="b5r-gg-xKo" id="9j0-y3-XUu"/>
+                                            <segue destination="ac6-Iy-du9" kind="show" identifier="detailsCounter" id="TUt-VZ-ndn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -163,7 +112,13 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wlF-7u-abt" secondAttribute="bottom" id="yW8-Ye-HO7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Counters" id="Xcq-PK-Khd"/>
+                    <navigationItem key="navigationItem" title="My Counters" id="Xcq-PK-Khd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="QzE-tF-hvy">
+                            <connections>
+                                <action selector="addNewCounter:" destination="BYZ-38-t0r" id="ewz-je-X5S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="wlF-7u-abt" id="EwP-T4-3r2"/>
                     </connections>
@@ -175,7 +130,7 @@
         <!--#MyCounter-->
         <scene sceneID="AZT-JG-E1k">
             <objects>
-                <viewController title="#MyCounter" id="emf-0v-tyu" customClass="CounterDetailViewController" customModule="InsanelySImpleTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="#MyCounter" automaticallyAdjustsScrollViewInsets="NO" id="emf-0v-tyu" customClass="CounterDetailViewController" customModule="InsanelySImpleTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J7p-NU-PFr"/>
                         <viewControllerLayoutGuide type="bottom" id="55X-IQ-N0S"/>
@@ -185,14 +140,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1vv-at-PXj">
-                                <rect key="frame" x="8" y="124" width="359" height="543"/>
+                                <rect key="frame" x="8" y="80" width="359" height="587"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TM0-E8-b8W" userLabel="RenameView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="😉 add a new thing to count" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4JG-2T-7S0">
                                         <rect key="frame" x="8" y="0.0" width="359" height="60"/>
@@ -222,12 +177,123 @@
                     <connections>
                         <outlet property="bottomConstraint" destination="IxK-ND-a1H" id="XPO-mc-3yi"/>
                         <outlet property="renameTextField" destination="4JG-2T-7S0" id="k9E-sX-nIk"/>
-                        <outlet property="textView" destination="5V4-hI-1TW" id="tC2-xm-koY"/>
+                        <outlet property="textView" destination="1vv-at-PXj" id="UuA-vE-Ero"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="38w-U2-P4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1953" y="139"/>
+        </scene>
+        <!--Counter Detail View Controller-->
+        <scene sceneID="Txe-OV-D32">
+            <objects>
+                <tableViewController id="ac6-Iy-du9" customClass="CounterDetailViewController" customModule="InsanelySImpleTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="lUi-ur-WVT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="counter name" id="uS9-iW-sz7">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="detailButton" indentationWidth="10" id="fi8-kD-Ybx">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fi8-kD-Ybx" id="9hi-gA-kgc">
+                                            <rect key="frame" x="0.0" y="0.0" width="328" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="counter name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="78e-N0-PNw">
+                                                    <rect key="frame" x="8" y="0.0" width="310" height="43.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43.5" id="t1T-OR-ya6"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="78e-N0-PNw" secondAttribute="trailing" constant="10" id="2Hi-CV-26f"/>
+                                                <constraint firstItem="78e-N0-PNw" firstAttribute="leading" secondItem="9hi-gA-kgc" secondAttribute="leading" constant="8" id="8ln-Yh-h3f"/>
+                                                <constraint firstItem="78e-N0-PNw" firstAttribute="top" secondItem="9hi-gA-kgc" secondAttribute="top" id="XEn-em-p9y"/>
+                                                <constraint firstAttribute="bottom" secondItem="78e-N0-PNw" secondAttribute="bottom" id="gJC-7Z-SMV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="current count" id="QvZ-c8-8ky">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="detailButton" indentationWidth="10" id="iOT-3F-beI">
+                                        <rect key="frame" x="0.0" y="155.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iOT-3F-beI" id="EQi-0c-q1A">
+                                            <rect key="frame" x="0.0" y="0.0" width="328" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="#count" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fSm-TP-a7U">
+                                                    <rect key="frame" x="10" y="0.0" width="310" height="43.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43.5" id="WBU-pu-q06"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="fSm-TP-a7U" secondAttribute="bottom" id="5Fn-Cn-HNi"/>
+                                                <constraint firstItem="fSm-TP-a7U" firstAttribute="leading" secondItem="EQi-0c-q1A" secondAttribute="leading" constant="10" id="BlV-zb-aoY"/>
+                                                <constraint firstItem="fSm-TP-a7U" firstAttribute="top" secondItem="EQi-0c-q1A" secondAttribute="top" id="hSe-QS-H63"/>
+                                                <constraint firstAttribute="trailing" secondItem="fSm-TP-a7U" secondAttribute="trailing" constant="8" id="sZy-hj-7kn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Counter notes" id="q7Q-2u-vOj">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="kGo-UC-Pyy">
+                                        <rect key="frame" x="0.0" y="255.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kGo-UC-Pyy" id="Hah-jI-HKk">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8vi-Fr-eYb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8vi-Fr-eYb" firstAttribute="leading" secondItem="Hah-jI-HKk" secondAttribute="leading" id="6Ze-FX-g8H"/>
+                                                <constraint firstAttribute="trailing" secondItem="8vi-Fr-eYb" secondAttribute="trailing" id="8cc-Le-kGw"/>
+                                                <constraint firstItem="8vi-Fr-eYb" firstAttribute="top" secondItem="Hah-jI-HKk" secondAttribute="top" id="Bmb-Ea-fux"/>
+                                                <constraint firstAttribute="bottom" secondItem="8vi-Fr-eYb" secondAttribute="bottom" id="zaj-fe-TuH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ac6-Iy-du9" id="DDa-s4-fIs"/>
+                            <outlet property="delegate" destination="ac6-Iy-du9" id="sQM-in-vjo"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="zaj-fe-TuH" id="0jd-ga-ghN"/>
+                        <outlet property="countTextfield" destination="fSm-TP-a7U" id="apI-sO-TAX"/>
+                        <outlet property="renameTextField" destination="78e-N0-PNw" id="5LO-rq-05E"/>
+                        <outlet property="textView" destination="8vi-Fr-eYb" id="Uqv-MI-yHT"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ot3-U6-xnT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2047" y="958"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LxI-ax-usx">
