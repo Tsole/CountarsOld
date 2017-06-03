@@ -39,11 +39,17 @@ class CounterDetailViewController: UITableViewController {
     
     
     override func viewWillDisappear(_ animated: Bool) {
-        //        stopObservingKeyboardChanges()
         
         guard var counter = counter else {
             return
         }
+        
+        //if the uses presses the back button while the counterTextfield is beeing editet and it is empty, automatically assign the value zero to the counter
+        guard let currentCount = countTextfield.text?.characters.count, currentCount != 0 else {
+            CountersManager.sharedInstance.updateCounter(counter: &counter, counterName: renameTextField.text!, count: 0, notes: textView.text)
+            return
+        }
+        
      CountersManager.sharedInstance.updateCounter(counter: &counter, counterName: renameTextField.text!, count: Int(countTextfield.text!)!, notes: textView.text)
     }
     
@@ -61,12 +67,15 @@ class CounterDetailViewController: UITableViewController {
     
     //MARK: keyboard toolbar
     func addDoneButtonOnKeyboard() {
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
-        doneToolbar.barStyle       = UIBarStyle.default
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 30))
+        doneToolbar.barStyle       = .default
         let flexSpace              = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        let done: UIBarButtonItem  = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(self.doneButtonAction))
+        
+        let done: UIBarButtonItem  = UIBarButtonItem(image: #imageLiteral(resourceName: "DismissKeyboardIcon"), style: .done, target: self, action: #selector(self.doneButtonAction))
+        let addDate: UIBarButtonItem = UIBarButtonItem(title: "Add Date", style: .plain, target: self, action: #selector(self.didPressAddDateButton))
         
         var items = [UIBarButtonItem]()
+        items.append(addDate)
         items.append(flexSpace)
         items.append(done)
         
@@ -78,10 +87,19 @@ class CounterDetailViewController: UITableViewController {
         self.textView.inputAccessoryView = doneToolbar
     }
     
+    
     func doneButtonAction() {
         self.renameTextField.resignFirstResponder()
         self.countTextfield.resignFirstResponder()
         self.textView.resignFirstResponder()
+    }
+    
+    
+    func didPressAddDateButton() {
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
+        self.textView.text.append(dateFormatter.string(from:currentDate))
     }
 }
 
