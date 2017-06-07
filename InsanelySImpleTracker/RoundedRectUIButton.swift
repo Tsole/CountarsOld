@@ -20,7 +20,6 @@ class RoundedRectUIButton: UIButton {
         self.layer.borderWidth = 1
         let blueColor = UIColor.init(red: 92/255 , green: 143/255, blue: 220/255, alpha: 1)
         self.layer.borderColor = blueColor.cgColor
-        
     }
  
 

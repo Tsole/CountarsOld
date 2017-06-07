@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4896CDFBD2A2C7EA2388E203 /* Pods_InsanelySImpleTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F7CBF594B09BDB454FDBFB /* Pods_InsanelySImpleTrackerUITests.framework */; };
 		AC0B21B51ED5A702003B0C68 /* RoundedRectUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B41ED5A702003B0C68 /* RoundedRectUIButton.swift */; };
 		AC0B21B71ED5BD08003B0C68 /* CounterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B61ED5BD08003B0C68 /* CounterDetailViewController.swift */; };
 		AC0B21B91ED5BDDA003B0C68 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B81ED5BDDA003B0C68 /* KeyboardHandler.swift */; };
@@ -23,6 +24,7 @@
 		ACD4067B1EC1FBA900DE08A3 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4067A1EC1FBA900DE08A3 /* Counter.swift */; };
 		ACD4067D1EC20D3F00DE08A3 /* CountersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4067C1EC20D3F00DE08A3 /* CountersManager.swift */; };
 		CA0B8A181AB6094DE3966964 /* Pods_InsanelySImpleTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C24FCAAFBFD2A24D0A16D0E /* Pods_InsanelySImpleTracker.framework */; };
+		F64761E465AB1EB389B707B3 /* Pods_InsanelySImpleTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28F70B50EA2B31708FBF953 /* Pods_InsanelySImpleTrackerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30444C4E067260815EEE1701 /* Pods-InsanelySImpleTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InsanelySImpleTrackerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InsanelySImpleTrackerUITests/Pods-InsanelySImpleTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4F13BF009110F67AC9C6E4E8 /* Pods-InsanelySImpleTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InsanelySImpleTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-InsanelySImpleTracker/Pods-InsanelySImpleTracker.release.xcconfig"; sourceTree = "<group>"; };
+		6C440F98E055AAFC9A77C612 /* Pods-InsanelySImpleTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InsanelySImpleTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InsanelySImpleTrackerTests/Pods-InsanelySImpleTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C24FCAAFBFD2A24D0A16D0E /* Pods_InsanelySImpleTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InsanelySImpleTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0B21B41ED5A702003B0C68 /* RoundedRectUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedRectUIButton.swift; sourceTree = "<group>"; };
 		AC0B21B61ED5BD08003B0C68 /* CounterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterDetailViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 		B28F70B50EA2B31708FBF953 /* Pods_InsanelySImpleTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InsanelySImpleTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F7CBF594B09BDB454FDBFB /* Pods_InsanelySImpleTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InsanelySImpleTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94A49040722FED0B53B5946 /* Pods-InsanelySImpleTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InsanelySImpleTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InsanelySImpleTracker/Pods-InsanelySImpleTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		E57243F5D5D5B218D6B2C17F /* Pods-InsanelySImpleTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InsanelySImpleTrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InsanelySImpleTrackerTests/Pods-InsanelySImpleTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		E73B29420B208266707CB76A /* Pods-InsanelySImpleTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InsanelySImpleTrackerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InsanelySImpleTrackerUITests/Pods-InsanelySImpleTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F64761E465AB1EB389B707B3 /* Pods_InsanelySImpleTrackerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4896CDFBD2A2C7EA2388E203 /* Pods_InsanelySImpleTrackerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +112,10 @@
 			children = (
 				D94A49040722FED0B53B5946 /* Pods-InsanelySImpleTracker.debug.xcconfig */,
 				4F13BF009110F67AC9C6E4E8 /* Pods-InsanelySImpleTracker.release.xcconfig */,
+				6C440F98E055AAFC9A77C612 /* Pods-InsanelySImpleTrackerTests.debug.xcconfig */,
+				E57243F5D5D5B218D6B2C17F /* Pods-InsanelySImpleTrackerTests.release.xcconfig */,
+				E73B29420B208266707CB76A /* Pods-InsanelySImpleTrackerUITests.debug.xcconfig */,
+				30444C4E067260815EEE1701 /* Pods-InsanelySImpleTrackerUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -208,9 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACC73BBF1E29610200B12544 /* Build configuration list for PBXNativeTarget "InsanelySImpleTrackerTests" */;
 			buildPhases = (
+				62B122A6292A9118CB14EE8F /* [CP] Check Pods Manifest.lock */,
 				ACC73BA41E29610200B12544 /* Sources */,
 				ACC73BA51E29610200B12544 /* Frameworks */,
 				ACC73BA61E29610200B12544 /* Resources */,
+				DC4B8182E8622FB21ABB69F8 /* [CP] Embed Pods Frameworks */,
+				3FF3CA95CA1B38729B492B2B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,9 +241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACC73BC21E29610200B12544 /* Build configuration list for PBXNativeTarget "InsanelySImpleTrackerUITests" */;
 			buildPhases = (
+				A9213A1509BB476B142172DE /* [CP] Check Pods Manifest.lock */,
 				ACC73BAF1E29610200B12544 /* Sources */,
 				ACC73BB01E29610200B12544 /* Frameworks */,
 				ACC73BB11E29610200B12544 /* Resources */,
+				D741A0035D3E98353167A6B8 /* [CP] Embed Pods Frameworks */,
+				003791DA71DC720F61B9E855 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -315,6 +333,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		003791DA71DC720F61B9E855 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InsanelySImpleTrackerUITests/Pods-InsanelySImpleTrackerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1296493127A1528DC00C6360 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,6 +363,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InsanelySImpleTracker/Pods-InsanelySImpleTracker-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3FF3CA95CA1B38729B492B2B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InsanelySImpleTrackerTests/Pods-InsanelySImpleTrackerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62B122A6292A9118CB14EE8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		A8C5B60554FDC91AAACE84A3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,6 +406,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A9213A1509BB476B142172DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D741A0035D3E98353167A6B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InsanelySImpleTrackerUITests/Pods-InsanelySImpleTrackerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC4B8182E8622FB21ABB69F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InsanelySImpleTrackerTests/Pods-InsanelySImpleTrackerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E635C3F3B57D0BC1A4B2EAFA /* [CP] Embed Pods Frameworks */ = {
@@ -554,6 +662,7 @@
 		};
 		ACC73BC01E29610200B12544 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C440F98E055AAFC9A77C612 /* Pods-InsanelySImpleTrackerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -568,6 +677,7 @@
 		};
 		ACC73BC11E29610200B12544 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E57243F5D5D5B218D6B2C17F /* Pods-InsanelySImpleTrackerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -582,6 +692,7 @@
 		};
 		ACC73BC31E29610200B12544 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E73B29420B208266707CB76A /* Pods-InsanelySImpleTrackerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = InsanelySImpleTrackerUITests/Info.plist;
@@ -595,6 +706,7 @@
 		};
 		ACC73BC41E29610200B12544 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30444C4E067260815EEE1701 /* Pods-InsanelySImpleTrackerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = InsanelySImpleTrackerUITests/Info.plist;
