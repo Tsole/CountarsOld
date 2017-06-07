@@ -85,6 +85,8 @@ class CounterDetailViewController: UITableViewController {
         self.renameTextField.inputAccessoryView = doneToolbar
         self.countTextfield.inputAccessoryView = doneToolbar
         self.textView.inputAccessoryView = doneToolbar
+        
+//        test
     }
     
     
