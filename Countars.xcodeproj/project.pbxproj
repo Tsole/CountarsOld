@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		AC0B21B51ED5A702003B0C68 /* RoundedRectUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B41ED5A702003B0C68 /* RoundedRectUIButton.swift */; };
 		AC0B21B71ED5BD08003B0C68 /* CounterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B61ED5BD08003B0C68 /* CounterDetailViewController.swift */; };
 		AC0B21B91ED5BDDA003B0C68 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B81ED5BDDA003B0C68 /* KeyboardHandler.swift */; };
+		AC59ECA11EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */; };
 		AC99A7B41EDEB0BC007A82C0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */; };
 		ACC73B981E29610200B12544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC73B971E29610200B12544 /* AppDelegate.swift */; };
 		ACC73B9A1E29610200B12544 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC73B991E29610200B12544 /* MainViewController.swift */; };
@@ -54,8 +55,9 @@
 		AC0B21B81ED5BDDA003B0C68 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		AC314DF81EC4BE390093C746 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Library/Developer/Xcode/DerivedData/InsanelySImpleTracker-aqonqgpphcftopgnesergsfqeyji/Build/Products/Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = "<group>"; };
 		AC314DF91EC4BE390093C746 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/InsanelySImpleTracker-aqonqgpphcftopgnesergsfqeyji/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
+		AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+KeyboardExtension.swift"; sourceTree = "<group>"; };
 		AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		ACC73B941E29610200B12544 /* InsanelySImpleTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InsanelySImpleTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC73B941E29610200B12544 /* Countars: Insanely Simple Trackers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Countars: Insanely Simple Trackers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC73B971E29610200B12544 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC73B991E29610200B12544 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ACC73B9C1E29610200B12544 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,7 +137,7 @@
 		ACC73B951E29610200B12544 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ACC73B941E29610200B12544 /* InsanelySImpleTracker.app */,
+				ACC73B941E29610200B12544 /* Countars: Insanely Simple Trackers.app */,
 				ACC73BA81E29610200B12544 /* InsanelySImpleTrackerTests.xctest */,
 				ACC73BB31E29610200B12544 /* InsanelySImpleTrackerUITests.xctest */,
 			);
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				ACC73B971E29610200B12544 /* AppDelegate.swift */,
+				AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */,
 				ACC73B991E29610200B12544 /* MainViewController.swift */,
 				AC0B21B61ED5BD08003B0C68 /* CounterDetailViewController.swift */,
 				AC0B21B81ED5BDDA003B0C68 /* KeyboardHandler.swift */,
@@ -196,9 +199,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ACC73B931E29610200B12544 /* InsanelySImpleTracker */ = {
+		ACC73B931E29610200B12544 /* Countars */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ACC73BBC1E29610200B12544 /* Build configuration list for PBXNativeTarget "InsanelySImpleTracker" */;
+			buildConfigurationList = ACC73BBC1E29610200B12544 /* Build configuration list for PBXNativeTarget "Countars" */;
 			buildPhases = (
 				A8C5B60554FDC91AAACE84A3 /* [CP] Check Pods Manifest.lock */,
 				ACC73B901E29610200B12544 /* Sources */,
@@ -211,9 +214,9 @@
 			);
 			dependencies = (
 			);
-			name = InsanelySImpleTracker;
+			name = Countars;
 			productName = InsanelySImpleTracker;
-			productReference = ACC73B941E29610200B12544 /* InsanelySImpleTracker.app */;
+			productReference = ACC73B941E29610200B12544 /* Countars: Insanely Simple Trackers.app */;
 			productType = "com.apple.product-type.application";
 		};
 		ACC73BA71E29610200B12544 /* InsanelySImpleTrackerTests */ = {
@@ -285,8 +288,8 @@
 					};
 				};
 			};
-			buildConfigurationList = ACC73B8F1E29610200B12544 /* Build configuration list for PBXProject "InsanelySImpleTracker" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = ACC73B8F1E29610200B12544 /* Build configuration list for PBXProject "Countars" */;
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -298,7 +301,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ACC73B931E29610200B12544 /* InsanelySImpleTracker */,
+				ACC73B931E29610200B12544 /* Countars */,
 				ACC73BA71E29610200B12544 /* InsanelySImpleTrackerTests */,
 				ACC73BB21E29610200B12544 /* InsanelySImpleTrackerUITests */,
 			);
@@ -481,6 +484,7 @@
 				AC0B21B91ED5BDDA003B0C68 /* KeyboardHandler.swift in Sources */,
 				ACD4067D1EC20D3F00DE08A3 /* CountersManager.swift in Sources */,
 				AC0B21B51ED5A702003B0C68 /* RoundedRectUIButton.swift in Sources */,
+				AC59ECA11EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift in Sources */,
 				ACC73BC81E2A447900B12544 /* AddNewCounterCell.swift in Sources */,
 				ACC73B9A1E29610200B12544 /* MainViewController.swift in Sources */,
 				AC99A7B41EDEB0BC007A82C0 /* String+Extension.swift in Sources */,
@@ -509,12 +513,12 @@
 /* Begin PBXTargetDependency section */
 		ACC73BAA1E29610200B12544 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ACC73B931E29610200B12544 /* InsanelySImpleTracker */;
+			target = ACC73B931E29610200B12544 /* Countars */;
 			targetProxy = ACC73BA91E29610200B12544 /* PBXContainerItemProxy */;
 		};
 		ACC73BB51E29610200B12544 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ACC73B931E29610200B12544 /* InsanelySImpleTracker */;
+			target = ACC73B931E29610200B12544 /* Countars */;
 			targetProxy = ACC73BB41E29610200B12544 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -640,8 +644,8 @@
 				DEVELOPMENT_TEAM = SR3J56PQ6U;
 				INFOPLIST_FILE = InsanelySImpleTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tsole.InsanelySImpleTracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsole.countars;
+				PRODUCT_NAME = "Countars: Insanely Simple Trackers";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -654,8 +658,8 @@
 				DEVELOPMENT_TEAM = SR3J56PQ6U;
 				INFOPLIST_FILE = InsanelySImpleTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tsole.InsanelySImpleTracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsole.countars;
+				PRODUCT_NAME = "Countars: Insanely Simple Trackers";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -721,7 +725,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ACC73B8F1E29610200B12544 /* Build configuration list for PBXProject "InsanelySImpleTracker" */ = {
+		ACC73B8F1E29610200B12544 /* Build configuration list for PBXProject "Countars" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ACC73BBA1E29610200B12544 /* Debug */,
@@ -730,7 +734,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ACC73BBC1E29610200B12544 /* Build configuration list for PBXNativeTarget "InsanelySImpleTracker" */ = {
+		ACC73BBC1E29610200B12544 /* Build configuration list for PBXNativeTarget "Countars" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ACC73BBD1E29610200B12544 /* Debug */,

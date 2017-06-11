@@ -97,25 +97,12 @@ class CountersManager {
     
     
     func createPlaceholderCounters() {
-        createCounter(counterName: "counter1", initialCount: 0)
-        createCounter(counterName: "counter2", initialCount: 0)
-        createCounter(counterName: "counter3", initialCount: 0)
-        createCounter(counterName: "counter4", initialCount: 0)
-        createCounter(counterName: "counter5", initialCount: 0)
-        createCounter(counterName: "counter6", initialCount: 0)
-        createCounter(counterName: "counter7", initialCount: 0)
-        createCounter(counterName: "counter8", initialCount: 0)
-        createCounter(counterName: "counter9", initialCount: 0)
-        createCounter(counterName: "counter10", initialCount: 0)
-        createCounter(counterName: "counter11", initialCount: 0)
-        createCounter(counterName: "counter12", initialCount: 0)
-        createCounter(counterName: "counter13", initialCount: 0)
-        createCounter(counterName: "counter14", initialCount: 0)
-        createCounter(counterName: "counter15", initialCount: 0)
-        createCounter(counterName: "counter16", initialCount: 0)
-        createCounter(counterName: "counter17", initialCount: 0)
-        createCounter(counterName: "counter18", initialCount: 0)
-        createCounter(counterName: "counter19", initialCount: 0)
+        createCounter(counterName: "💧 Glasses of water today", initialCount: 2)
+        createCounter(counterName: "💪 Push ups record", initialCount: 35)
+        createCounter(counterName: "📚 Books this year", initialCount: 6)
+        createCounter(counterName: "🎬 Movies this month", initialCount: 3)
+        createCounter(counterName: "🎂 Days until birthday", initialCount: 27)
+        createCounter(counterName: "Days without smoking", initialCount: 39)
     }
     
 }

@@ -50,7 +50,7 @@ class CounterDetailViewController: UITableViewController {
             return
         }
         
-     CountersManager.sharedInstance.updateCounter(counter: &counter, counterName: renameTextField.text!, count: Int(countTextfield.text!)!, notes: textView.text)
+        CountersManager.sharedInstance.updateCounter(counter: &counter, counterName: renameTextField.text!, count: Int(countTextfield.text!)!, notes: textView.text)
     }
     
     
@@ -67,33 +67,20 @@ class CounterDetailViewController: UITableViewController {
     
     //MARK: keyboard toolbar
     func addDoneButtonOnKeyboard() {
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 30))
-        doneToolbar.barStyle       = .default
-        let flexSpace              = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        //TODO: move it to an extension of UIToolBar
+        let doneAndDateToolbar: UIToolbar = UIToolbar()
+        doneAndDateToolbar.barStyle = .default
         
-        let done: UIBarButtonItem  = UIBarButtonItem(image: #imageLiteral(resourceName: "DismissKeyboardIcon"), style: .done, target: self, action: #selector(self.doneButtonAction))
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton: UIBarButtonItem  = UIBarButtonItem(image: #imageLiteral(resourceName: "DismissKeyboardIcon"), style: .done, target: self, action: #selector(self.doneButtonAction))
         let addDate: UIBarButtonItem = UIBarButtonItem(title: "Add Date", style: .plain, target: self, action: #selector(self.didPressAddDateButton))
         
-        var items = [UIBarButtonItem]()
-        items.append(addDate)
-        items.append(flexSpace)
-        items.append(done)
+        doneAndDateToolbar.items = [addDate,flexSpace,doneButton]
+        doneAndDateToolbar.sizeToFit()
         
-        doneToolbar.items = items
-        doneToolbar.sizeToFit()
-        
-        self.renameTextField.inputAccessoryView = doneToolbar
-        self.countTextfield.inputAccessoryView = doneToolbar
-        self.textView.inputAccessoryView = doneToolbar
-        
-//        test
-    }
-    
-    
-    func doneButtonAction() {
-        self.renameTextField.resignFirstResponder()
-        self.countTextfield.resignFirstResponder()
-        self.textView.resignFirstResponder()
+        self.renameTextField.inputAccessoryView = self.appendToolBarWithDismissKeyBoardButton()
+        self.countTextfield.inputAccessoryView = self.appendToolBarWithDismissKeyBoardButton()
+        self.textView.inputAccessoryView = doneAndDateToolbar
     }
     
     

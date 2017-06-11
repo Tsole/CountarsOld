@@ -10,8 +10,8 @@ import UIKit
 import RealmSwift
 
 enum CounterConstants {
-    static let maxCounterValue = 100000000000000
-    static let minCounterValue = -100000000000000
+    static let maxCounterValue: Int =  2147483646
+    static let minCounterValue: Int = -2147483644
 }
 
 class Counter: Object {

@@ -20,9 +20,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         NotificationCenter.default.addObserver(self, selector: #selector(self.maxValueAlert), name: NSNotification.Name(rawValue: "maxValue"), object: nil)
-
         NotificationCenter.default.addObserver(self, selector: #selector(self.minValueAlert), name: NSNotification.Name(rawValue: "minValue"), object: nil)
 
+//        CountersManager.sharedInstance.deleteAllEntries()
+        
         // Do any additional setup after loading the view, typically from a nib.
         if countersManager.counters.count == 0 {
             CountersManager.sharedInstance.createPlaceholderCounters()
@@ -167,6 +168,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         self.present(alertController, animated: true) {}
     }
 
+    
     func minValueAlert() {
         let alertController = UIAlertController(title: "Minimum value reached!", message: "You have reached the minimum possible number for a counter, and can not decreases it anymore", preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default) { action in}
