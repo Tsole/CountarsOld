@@ -105,4 +105,11 @@ class CountersManager {
         createCounter(counterName: "Days without smoking", initialCount: 39)
     }
     
+    func resetCounter(counter: inout Counter, completionHandler: () -> Void) {
+        let realm = try! Realm()
+        try! realm.write {
+            counter.count = 0
+            completionHandler()
+        }
+    }
 }

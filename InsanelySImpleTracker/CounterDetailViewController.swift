@@ -35,6 +35,19 @@ class CounterDetailViewController: UITableViewController {
         renameTextField.text = counter.counterName
         countTextfield.text = String(describing: counter.count)
         textView.text = counter.counterNotes
+        
+        let resetButton = UIBarButtonItem(title: "Reset Counter", style: .plain, target: self, action: #selector(self.resetCounter))
+        self.navigationItem.rightBarButtonItem = resetButton
+    }
+    
+    
+    func resetCounter() {
+        guard var counter = counter else {
+            return
+        }
+        CountersManager.sharedInstance.resetCounter(counter: &counter) { 
+            countTextfield.text = String(describing: counter.count)
+        }
     }
     
     
@@ -57,6 +70,7 @@ class CounterDetailViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        viewWillDisappear(true)
     }
     
     

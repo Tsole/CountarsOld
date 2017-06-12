@@ -10,7 +10,6 @@
 		4896CDFBD2A2C7EA2388E203 /* Pods_InsanelySImpleTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F7CBF594B09BDB454FDBFB /* Pods_InsanelySImpleTrackerUITests.framework */; };
 		AC0B21B51ED5A702003B0C68 /* RoundedRectUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B41ED5A702003B0C68 /* RoundedRectUIButton.swift */; };
 		AC0B21B71ED5BD08003B0C68 /* CounterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B61ED5BD08003B0C68 /* CounterDetailViewController.swift */; };
-		AC0B21B91ED5BDDA003B0C68 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B81ED5BDDA003B0C68 /* KeyboardHandler.swift */; };
 		AC59ECA11EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */; };
 		AC99A7B41EDEB0BC007A82C0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */; };
 		ACC73B981E29610200B12544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC73B971E29610200B12544 /* AppDelegate.swift */; };
@@ -21,7 +20,6 @@
 		ACC73BAD1E29610200B12544 /* InsanelySImpleTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC73BAC1E29610200B12544 /* InsanelySImpleTrackerTests.swift */; };
 		ACC73BB81E29610200B12544 /* InsanelySImpleTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC73BB71E29610200B12544 /* InsanelySImpleTrackerUITests.swift */; };
 		ACC73BC61E2A446800B12544 /* CounterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC73BC51E2A446800B12544 /* CounterCell.swift */; };
-		ACC73BC81E2A447900B12544 /* AddNewCounterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC73BC71E2A447900B12544 /* AddNewCounterCell.swift */; };
 		ACD4067B1EC1FBA900DE08A3 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4067A1EC1FBA900DE08A3 /* Counter.swift */; };
 		ACD4067D1EC20D3F00DE08A3 /* CountersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4067C1EC20D3F00DE08A3 /* CountersManager.swift */; };
 		CA0B8A181AB6094DE3966964 /* Pods_InsanelySImpleTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C24FCAAFBFD2A24D0A16D0E /* Pods_InsanelySImpleTracker.framework */; };
@@ -52,7 +50,6 @@
 		7C24FCAAFBFD2A24D0A16D0E /* Pods_InsanelySImpleTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InsanelySImpleTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0B21B41ED5A702003B0C68 /* RoundedRectUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedRectUIButton.swift; sourceTree = "<group>"; };
 		AC0B21B61ED5BD08003B0C68 /* CounterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterDetailViewController.swift; sourceTree = "<group>"; };
-		AC0B21B81ED5BDDA003B0C68 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		AC314DF81EC4BE390093C746 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Library/Developer/Xcode/DerivedData/InsanelySImpleTracker-aqonqgpphcftopgnesergsfqeyji/Build/Products/Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = "<group>"; };
 		AC314DF91EC4BE390093C746 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/InsanelySImpleTracker-aqonqgpphcftopgnesergsfqeyji/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
 		AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+KeyboardExtension.swift"; sourceTree = "<group>"; };
@@ -71,7 +68,6 @@
 		ACC73BB71E29610200B12544 /* InsanelySImpleTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsanelySImpleTrackerUITests.swift; sourceTree = "<group>"; };
 		ACC73BB91E29610200B12544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACC73BC51E2A446800B12544 /* CounterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterCell.swift; sourceTree = "<group>"; };
-		ACC73BC71E2A447900B12544 /* AddNewCounterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewCounterCell.swift; sourceTree = "<group>"; };
 		ACD4067A1EC1FBA900DE08A3 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		ACD4067C1EC20D3F00DE08A3 /* CountersManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountersManager.swift; sourceTree = "<group>"; };
 		B28F70B50EA2B31708FBF953 /* Pods_InsanelySImpleTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InsanelySImpleTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +118,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AC3B7F551EEF029500353ABC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACC73B991E29610200B12544 /* MainViewController.swift */,
+				AC0B21B61ED5BD08003B0C68 /* CounterDetailViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AC3B7F561EEF02B700353ABC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */,
+				AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		ACC73B8B1E29610200B12544 = {
 			isa = PBXGroup;
 			children = (
@@ -148,16 +162,12 @@
 			isa = PBXGroup;
 			children = (
 				ACC73B971E29610200B12544 /* AppDelegate.swift */,
-				AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */,
-				ACC73B991E29610200B12544 /* MainViewController.swift */,
-				AC0B21B61ED5BD08003B0C68 /* CounterDetailViewController.swift */,
-				AC0B21B81ED5BDDA003B0C68 /* KeyboardHandler.swift */,
+				AC3B7F561EEF02B700353ABC /* Extensions */,
+				AC3B7F551EEF029500353ABC /* ViewControllers */,
 				ACD4067C1EC20D3F00DE08A3 /* CountersManager.swift */,
 				ACC73BC51E2A446800B12544 /* CounterCell.swift */,
 				AC0B21B41ED5A702003B0C68 /* RoundedRectUIButton.swift */,
-				ACC73BC71E2A447900B12544 /* AddNewCounterCell.swift */,
 				ACD4067A1EC1FBA900DE08A3 /* Counter.swift */,
-				AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */,
 				ACC73B9B1E29610200B12544 /* Main.storyboard */,
 				ACC73B9E1E29610200B12544 /* Assets.xcassets */,
 				ACC73BA01E29610200B12544 /* LaunchScreen.storyboard */,
@@ -481,11 +491,9 @@
 				ACD4067B1EC1FBA900DE08A3 /* Counter.swift in Sources */,
 				ACC73BC61E2A446800B12544 /* CounterCell.swift in Sources */,
 				AC0B21B71ED5BD08003B0C68 /* CounterDetailViewController.swift in Sources */,
-				AC0B21B91ED5BDDA003B0C68 /* KeyboardHandler.swift in Sources */,
 				ACD4067D1EC20D3F00DE08A3 /* CountersManager.swift in Sources */,
 				AC0B21B51ED5A702003B0C68 /* RoundedRectUIButton.swift in Sources */,
 				AC59ECA11EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift in Sources */,
-				ACC73BC81E2A447900B12544 /* AddNewCounterCell.swift in Sources */,
 				ACC73B9A1E29610200B12544 /* MainViewController.swift in Sources */,
 				AC99A7B41EDEB0BC007A82C0 /* String+Extension.swift in Sources */,
 				ACC73B981E29610200B12544 /* AppDelegate.swift in Sources */,
