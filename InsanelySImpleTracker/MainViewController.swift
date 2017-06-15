@@ -21,8 +21,6 @@ class ViewController: UIViewController {
 
         NotificationCenter.default.addObserver(self, selector: #selector(self.maxValueAlert), name: NSNotification.Name(rawValue: "maxValue"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.minValueAlert), name: NSNotification.Name(rawValue: "minValue"), object: nil)
-
-//        CountersManager.sharedInstance.deleteAllEntries()
         
         // Do any additional setup after loading the view, typically from a nib.
         if countersManager.counters.count == 0 {
@@ -35,7 +33,6 @@ class ViewController: UIViewController {
 
 
     func showEditing(sender: UIBarButtonItem) {
-
         if (self.tableView.isEditing == true) {
             self.tableView.isEditing = false
             self.navigationItem.leftBarButtonItem?.title = "Edit"

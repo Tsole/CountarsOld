@@ -136,6 +136,15 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		AC3B7F571EEF068700353ABC /* PersistentLayer */ = {
+			isa = PBXGroup;
+			children = (
+				ACD4067C1EC20D3F00DE08A3 /* CountersManager.swift */,
+				ACD4067A1EC1FBA900DE08A3 /* Counter.swift */,
+			);
+			name = PersistentLayer;
+			sourceTree = "<group>";
+		};
 		ACC73B8B1E29610200B12544 = {
 			isa = PBXGroup;
 			children = (
@@ -164,10 +173,9 @@
 				ACC73B971E29610200B12544 /* AppDelegate.swift */,
 				AC3B7F561EEF02B700353ABC /* Extensions */,
 				AC3B7F551EEF029500353ABC /* ViewControllers */,
-				ACD4067C1EC20D3F00DE08A3 /* CountersManager.swift */,
+				AC3B7F571EEF068700353ABC /* PersistentLayer */,
 				ACC73BC51E2A446800B12544 /* CounterCell.swift */,
 				AC0B21B41ED5A702003B0C68 /* RoundedRectUIButton.swift */,
-				ACD4067A1EC1FBA900DE08A3 /* Counter.swift */,
 				ACC73B9B1E29610200B12544 /* Main.storyboard */,
 				ACC73B9E1E29610200B12544 /* Assets.xcassets */,
 				ACC73BA01E29610200B12544 /* LaunchScreen.storyboard */,

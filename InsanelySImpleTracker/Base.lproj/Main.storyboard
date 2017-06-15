@@ -12,7 +12,7 @@
         <!--My Counters-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="InsanelySImpleTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Countars__Insanely_Simple_Trackers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="countertCell" rowHeight="60" id="5ke-3J-uNU" customClass="CounterCell" customModule="InsanelySImpleTracker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="countertCell" rowHeight="60" id="5ke-3J-uNU" customClass="CounterCell" customModule="Countars__Insanely_Simple_Trackers" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5ke-3J-uNU" id="guI-uf-fG3">
@@ -41,7 +41,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ytL-mZ-rrX" userLabel="StepperView">
                                                     <rect key="frame" x="219" y="0.0" width="148" height="60"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxF-d1-7B4" userLabel="decreaseButton" customClass="RoundedRectUIButton" customModule="InsanelySImpleTracker" customModuleProvider="target">
+                                                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxF-d1-7B4" userLabel="decreaseButton" customClass="RoundedRectUIButton" customModule="Countars__Insanely_Simple_Trackers" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="7" width="46" height="46"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="46" id="lPU-Ph-PFZ"/>
@@ -61,7 +61,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40k-hl-y8x" userLabel="incraseButton" customClass="RoundedRectUIButton" customModule="InsanelySImpleTracker" customModuleProvider="target">
+                                                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40k-hl-y8x" userLabel="incraseButton" customClass="RoundedRectUIButton" customModule="Countars__Insanely_Simple_Trackers" customModuleProvider="target">
                                                             <rect key="frame" x="102" y="7" width="46" height="46"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="46" id="FNa-Lc-yQQ"/>
@@ -130,7 +130,7 @@
         <!--Counter Detail View Controller-->
         <scene sceneID="Txe-OV-D32">
             <objects>
-                <tableViewController id="ac6-Iy-du9" customClass="CounterDetailViewController" customModule="InsanelySImpleTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ac6-Iy-du9" customClass="CounterDetailViewController" customModule="Countars__Insanely_Simple_Trackers" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="lUi-ur-WVT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,10 +194,39 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Counter Step: +/-" id="WIg-zc-0zI" userLabel="Counter Step">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="qIx-BY-P9l">
+                                        <rect key="frame" x="0.0" y="255.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qIx-BY-P9l" id="FJB-Le-Gq5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="#step" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G2B-AD-c7n">
+                                                    <rect key="frame" x="10" y="0.0" width="357" height="43.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43.5" id="sXb-Mc-FqA"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="G2B-AD-c7n" secondAttribute="trailing" constant="8" id="6Za-RD-gpL"/>
+                                                <constraint firstItem="G2B-AD-c7n" firstAttribute="top" secondItem="FJB-Le-Gq5" secondAttribute="top" id="YEe-QC-geg"/>
+                                                <constraint firstAttribute="bottom" secondItem="G2B-AD-c7n" secondAttribute="bottom" id="exf-qN-mXm"/>
+                                                <constraint firstItem="G2B-AD-c7n" firstAttribute="leading" secondItem="FJB-Le-Gq5" secondAttribute="leading" constant="10" id="yxx-Oy-45p"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="Counter notes" id="q7Q-2u-vOj">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="kGo-UC-Pyy">
-                                        <rect key="frame" x="0.0" y="255.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="355.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kGo-UC-Pyy" id="Hah-jI-HKk">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -228,9 +257,9 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="bottomConstraint" destination="zaj-fe-TuH" id="0jd-ga-ghN"/>
                         <outlet property="countTextfield" destination="fSm-TP-a7U" id="apI-sO-TAX"/>
                         <outlet property="renameTextField" destination="78e-N0-PNw" id="5LO-rq-05E"/>
+                        <outlet property="stepTextField" destination="G2B-AD-c7n" id="RZy-tI-tm5"/>
                         <outlet property="textView" destination="8vi-Fr-eYb" id="Uqv-MI-yHT"/>
                     </connections>
                 </tableViewController>

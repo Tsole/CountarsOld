@@ -30,7 +30,7 @@ class CountersManager {
     }
     
     
-    func updateCounter(counter: inout Counter, counterName: String, count: Int, notes: String) {
+    func updateCounter(counter: inout Counter, counterName: String, count: Int, notes: String, step: Int) {
 
         guard count <= CounterConstants.maxCounterValue else {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "maxValue"), object: nil, userInfo: nil)
@@ -47,6 +47,7 @@ class CountersManager {
             counter.counterName = counterName
             counter.count = count
             counter.counterNotes = notes
+            counter.step = step
         }
     }
     
@@ -61,28 +62,28 @@ class CountersManager {
     
     func decreaseCoutnerValue(counter: inout Counter) {
 
-        guard counter.count-1 >= CounterConstants.minCounterValue else {
+        guard counter.count-counter.step >= CounterConstants.minCounterValue else {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "minValue"), object: nil, userInfo: nil)
             return
         }
 
         let realm = try! Realm()
         try! realm.write {
-            counter.count -= 1
+            counter.count -= counter.step
         }
     }
     
     
     func increaseCoutnerValue(counter: inout Counter) {
 
-        guard counter.count + 1 <= CounterConstants.maxCounterValue else {
+        guard counter.count + counter.step <= CounterConstants.maxCounterValue else {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "maxValue"), object: nil, userInfo: nil)
             return
         }
 
         let realm = try! Realm()
         try! realm.write {
-            counter.count += 1
+            counter.count += counter.step
         }
     }
     

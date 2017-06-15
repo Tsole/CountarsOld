@@ -12,8 +12,8 @@ class CounterDetailViewController: UITableViewController {
     
     @IBOutlet weak var renameTextField: UITextField!
     @IBOutlet weak var countTextfield: UITextField!
+    @IBOutlet weak var stepTextField: UITextField!
     @IBOutlet var textView: UITextView!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     var counter: Counter?
     
@@ -35,6 +35,7 @@ class CounterDetailViewController: UITableViewController {
         renameTextField.text = counter.counterName
         countTextfield.text = String(describing: counter.count)
         textView.text = counter.counterNotes
+        stepTextField.text = String(describing: counter.step)
         
         let resetButton = UIBarButtonItem(title: "Reset Counter", style: .plain, target: self, action: #selector(self.resetCounter))
         self.navigationItem.rightBarButtonItem = resetButton
@@ -45,25 +46,27 @@ class CounterDetailViewController: UITableViewController {
         guard var counter = counter else {
             return
         }
-        CountersManager.sharedInstance.resetCounter(counter: &counter) { 
+        CountersManager.sharedInstance.resetCounter(counter: &counter) {
             countTextfield.text = String(describing: counter.count)
         }
     }
     
     
     override func viewWillDisappear(_ animated: Bool) {
-        
         guard var counter = counter else {
             return
         }
         
-        //if the uses presses the back button while the counterTextfield is beeing editet and it is empty, automatically assign the value zero to the counter
-        guard let currentCount = countTextfield.text?.characters.count, currentCount != 0 else {
-            CountersManager.sharedInstance.updateCounter(counter: &counter, counterName: renameTextField.text!, count: 0, notes: textView.text)
-            return
+        if countTextfield.text?.characters.count == 0 {
+            countTextfield.text = counter.counterName
         }
         
-        CountersManager.sharedInstance.updateCounter(counter: &counter, counterName: renameTextField.text!, count: Int(countTextfield.text!)!, notes: textView.text)
+        if stepTextField.text?.characters.count == 0 {
+           stepTextField.text = String(counter.step)
+        }
+        
+        //TODO: better handling of force unwrapping
+        CountersManager.sharedInstance.updateCounter(counter: &counter, counterName: renameTextField.text!, count: Int(countTextfield.text!)!, notes: textView.text, step: Int(stepTextField.text!)!)
     }
     
     
@@ -92,9 +95,11 @@ class CounterDetailViewController: UITableViewController {
         doneAndDateToolbar.items = [addDate,flexSpace,doneButton]
         doneAndDateToolbar.sizeToFit()
         
-        self.renameTextField.inputAccessoryView = self.appendToolBarWithDismissKeyBoardButton()
-        self.countTextfield.inputAccessoryView = self.appendToolBarWithDismissKeyBoardButton()
-        self.textView.inputAccessoryView = doneAndDateToolbar
+        renameTextField.inputAccessoryView = appendToolBarWithDismissKeyBoardButton()
+        countTextfield.inputAccessoryView = appendToolBarWithDismissKeyBoardButton()
+        countTextfield.inputAccessoryView = appendToolBarWithDismissKeyBoardButton()
+        stepTextField.inputAccessoryView = appendToolBarWithDismissKeyBoardButton()
+        textView.inputAccessoryView = doneAndDateToolbar
     }
     
     
