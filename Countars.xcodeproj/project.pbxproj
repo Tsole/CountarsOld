@@ -24,8 +24,6 @@
 		ACC73BC61E2A446800B12544 /* CounterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC73BC51E2A446800B12544 /* CounterCell.swift */; };
 		ACD4067B1EC1FBA900DE08A3 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4067A1EC1FBA900DE08A3 /* Counter.swift */; };
 		ACD4067D1EC20D3F00DE08A3 /* CountersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4067C1EC20D3F00DE08A3 /* CountersManager.swift */; };
-		CA0B8A181AB6094DE3966964 /* Pods_InsanelySImpleTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C24FCAAFBFD2A24D0A16D0E /* Pods_InsanelySImpleTracker.framework */; };
-		D96B5490F8F03B9BCC739B55 /* Pods_Countars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACD0FE1AA386FA2FB2928B7 /* Pods_Countars.framework */; };
 		F64761E465AB1EB389B707B3 /* Pods_InsanelySImpleTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28F70B50EA2B31708FBF953 /* Pods_InsanelySImpleTrackerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +56,8 @@
 		AC314DF81EC4BE390093C746 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Library/Developer/Xcode/DerivedData/InsanelySImpleTracker-aqonqgpphcftopgnesergsfqeyji/Build/Products/Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = "<group>"; };
 		AC314DF91EC4BE390093C746 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/InsanelySImpleTracker-aqonqgpphcftopgnesergsfqeyji/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
 		AC4D1A851EFD5EE30072D979 /* HistoryTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTVC.swift; sourceTree = "<group>"; };
+		AC5941111EFED7650015330A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../Library/Developer/Xcode/DerivedData/Countars-hkgpoasutnmbxbbewdilkeftdkks/Build/Products/Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = "<group>"; };
+		AC5941131EFED76C0015330A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../Library/Developer/Xcode/DerivedData/Countars-hkgpoasutnmbxbbewdilkeftdkks/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
 		AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+KeyboardExtension.swift"; sourceTree = "<group>"; };
 		AC5B98331EF965B50069F26D /* HistoryEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryEntry.swift; sourceTree = "<group>"; };
 		AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -90,8 +90,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA0B8A181AB6094DE3966964 /* Pods_InsanelySImpleTracker.framework in Frameworks */,
-				D96B5490F8F03B9BCC739B55 /* Pods_Countars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +216,8 @@
 		C766501E900A8C806B245AA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC5941131EFED76C0015330A /* RealmSwift.framework */,
+				AC5941111EFED7650015330A /* Realm.framework */,
 				AC314DF81EC4BE390093C746 /* Realm.framework */,
 				AC314DF91EC4BE390093C746 /* RealmSwift.framework */,
 				7C24FCAAFBFD2A24D0A16D0E /* Pods_InsanelySImpleTracker.framework */,
