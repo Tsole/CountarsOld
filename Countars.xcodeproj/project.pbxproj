@@ -25,6 +25,7 @@
 		ACD4067B1EC1FBA900DE08A3 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4067A1EC1FBA900DE08A3 /* Counter.swift */; };
 		ACD4067D1EC20D3F00DE08A3 /* CountersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4067C1EC20D3F00DE08A3 /* CountersManager.swift */; };
 		CA0B8A181AB6094DE3966964 /* Pods_InsanelySImpleTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C24FCAAFBFD2A24D0A16D0E /* Pods_InsanelySImpleTracker.framework */; };
+		D96B5490F8F03B9BCC739B55 /* Pods_Countars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACD0FE1AA386FA2FB2928B7 /* Pods_Countars.framework */; };
 		F64761E465AB1EB389B707B3 /* Pods_InsanelySImpleTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28F70B50EA2B31708FBF953 /* Pods_InsanelySImpleTrackerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		30444C4E067260815EEE1701 /* Pods-InsanelySImpleTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InsanelySImpleTrackerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InsanelySImpleTrackerUITests/Pods-InsanelySImpleTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3ACD0FE1AA386FA2FB2928B7 /* Pods_Countars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Countars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BF0923411911A6FB5E1C1A4 /* Pods-Countars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Countars.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Countars/Pods-Countars.debug.xcconfig"; sourceTree = "<group>"; };
 		4F13BF009110F67AC9C6E4E8 /* Pods-InsanelySImpleTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InsanelySImpleTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-InsanelySImpleTracker/Pods-InsanelySImpleTracker.release.xcconfig"; sourceTree = "<group>"; };
 		6C440F98E055AAFC9A77C612 /* Pods-InsanelySImpleTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InsanelySImpleTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InsanelySImpleTrackerTests/Pods-InsanelySImpleTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C24FCAAFBFD2A24D0A16D0E /* Pods_InsanelySImpleTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InsanelySImpleTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +77,7 @@
 		ACC73BC51E2A446800B12544 /* CounterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterCell.swift; sourceTree = "<group>"; };
 		ACD4067A1EC1FBA900DE08A3 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		ACD4067C1EC20D3F00DE08A3 /* CountersManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountersManager.swift; sourceTree = "<group>"; };
+		B20BA72A61DAD2190F16C6C1 /* Pods-Countars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Countars.release.xcconfig"; path = "Pods/Target Support Files/Pods-Countars/Pods-Countars.release.xcconfig"; sourceTree = "<group>"; };
 		B28F70B50EA2B31708FBF953 /* Pods_InsanelySImpleTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InsanelySImpleTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F7CBF594B09BDB454FDBFB /* Pods_InsanelySImpleTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InsanelySImpleTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94A49040722FED0B53B5946 /* Pods-InsanelySImpleTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InsanelySImpleTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InsanelySImpleTracker/Pods-InsanelySImpleTracker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA0B8A181AB6094DE3966964 /* Pods_InsanelySImpleTracker.framework in Frameworks */,
+				D96B5490F8F03B9BCC739B55 /* Pods_Countars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +123,8 @@
 				E57243F5D5D5B218D6B2C17F /* Pods-InsanelySImpleTrackerTests.release.xcconfig */,
 				E73B29420B208266707CB76A /* Pods-InsanelySImpleTrackerUITests.debug.xcconfig */,
 				30444C4E067260815EEE1701 /* Pods-InsanelySImpleTrackerUITests.release.xcconfig */,
+				4BF0923411911A6FB5E1C1A4 /* Pods-Countars.debug.xcconfig */,
+				B20BA72A61DAD2190F16C6C1 /* Pods-Countars.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -216,6 +223,7 @@
 				7C24FCAAFBFD2A24D0A16D0E /* Pods_InsanelySImpleTracker.framework */,
 				B28F70B50EA2B31708FBF953 /* Pods_InsanelySImpleTrackerTests.framework */,
 				B3F7CBF594B09BDB454FDBFB /* Pods_InsanelySImpleTrackerUITests.framework */,
+				3ACD0FE1AA386FA2FB2928B7 /* Pods_Countars.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -387,7 +395,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InsanelySImpleTracker/Pods-InsanelySImpleTracker-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Countars/Pods-Countars-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3FF3CA95CA1B38729B492B2B /* [CP] Copy Pods Resources */ = {
@@ -492,7 +500,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InsanelySImpleTracker/Pods-InsanelySImpleTracker-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Countars/Pods-Countars-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -662,7 +670,7 @@
 		};
 		ACC73BBD1E29610200B12544 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D94A49040722FED0B53B5946 /* Pods-InsanelySImpleTracker.debug.xcconfig */;
+			baseConfigurationReference = 4BF0923411911A6FB5E1C1A4 /* Pods-Countars.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SR3J56PQ6U;
@@ -676,7 +684,7 @@
 		};
 		ACC73BBE1E29610200B12544 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F13BF009110F67AC9C6E4E8 /* Pods-InsanelySImpleTracker.release.xcconfig */;
+			baseConfigurationReference = B20BA72A61DAD2190F16C6C1 /* Pods-Countars.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SR3J56PQ6U;
