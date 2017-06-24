@@ -14,6 +14,7 @@
 		AC59ECA11EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */; };
 		AC5B98341EF965B50069F26D /* HistoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B98331EF965B50069F26D /* HistoryEntry.swift */; };
 		AC99A7B41EDEB0BC007A82C0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */; };
+		ACBF38E01EFEDCD500FEDD2A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACBF38DF1EFEDCD500FEDD2A /* RealmSwift.framework */; };
 		ACC73B981E29610200B12544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC73B971E29610200B12544 /* AppDelegate.swift */; };
 		ACC73B9A1E29610200B12544 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC73B991E29610200B12544 /* MainViewController.swift */; };
 		ACC73B9D1E29610200B12544 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC73B9B1E29610200B12544 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+KeyboardExtension.swift"; sourceTree = "<group>"; };
 		AC5B98331EF965B50069F26D /* HistoryEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryEntry.swift; sourceTree = "<group>"; };
 		AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		ACBF38DF1EFEDCD500FEDD2A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
 		ACC73B941E29610200B12544 /* Countars: Insanely Simple Trackers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Countars: Insanely Simple Trackers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC73B971E29610200B12544 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC73B991E29610200B12544 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACBF38E01EFEDCD500FEDD2A /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +219,7 @@
 		C766501E900A8C806B245AA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ACBF38DF1EFEDCD500FEDD2A /* RealmSwift.framework */,
 				AC5941131EFED76C0015330A /* RealmSwift.framework */,
 				AC5941111EFED7650015330A /* Realm.framework */,
 				AC314DF81EC4BE390093C746 /* Realm.framework */,
@@ -674,6 +678,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SR3J56PQ6U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
+				);
 				INFOPLIST_FILE = InsanelySImpleTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsole.countars;
@@ -688,6 +696,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SR3J56PQ6U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
+				);
 				INFOPLIST_FILE = InsanelySImpleTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsole.countars;

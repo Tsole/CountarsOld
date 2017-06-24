@@ -45,6 +45,7 @@ class HistoryTVC: UITableViewController {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         cell.textLabel?.text = String(histroyEntries[indexPath.row].counterValue)
         cell.detailTextLabel?.text = String(describing: histroyEntries[indexPath.row].date)
+        cell.selectionStyle = .none
 
         return cell
     }

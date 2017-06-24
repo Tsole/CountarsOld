@@ -27,9 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         newObject!["step"] = 1
                     }
                 }
-                if (oldSchemaVersion < 8) {
+                if (oldSchemaVersion < 9) {
                     migration.enumerateObjects(ofType: Counter.className()) { oldObject, newObject in
-                        newObject!["counterHistory"] = []
+                        newObject!["historyEntries"] = []
                     }
                 }
         })
