@@ -20,11 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //MARK: Realm Migration block
         let config = Realm.Configuration(
-            schemaVersion: 7,
+            schemaVersion: 9,
             migrationBlock: { migration, oldSchemaVersion in
                 if (oldSchemaVersion < 7) {
                     migration.enumerateObjects(ofType: Counter.className()) { oldObject, newObject in
                         newObject!["step"] = 1
+                    }
+                }
+                if (oldSchemaVersion < 8) {
+                    migration.enumerateObjects(ofType: Counter.className()) { oldObject, newObject in
+                        newObject!["counterHistory"] = []
                     }
                 }
         })

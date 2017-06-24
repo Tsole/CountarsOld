@@ -23,6 +23,8 @@ class Counter: Object {
     dynamic var counterNotes = ""
     dynamic var step = 1
     
+    var historyEntries = List<HistoryEntry>()
+        
     override static func primaryKey() -> String? {
         return "counterID"
     }

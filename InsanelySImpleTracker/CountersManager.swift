@@ -22,9 +22,10 @@ class CountersManager {
     
     
     func createCounter(counterName: String, initialCount: Int) {
-        let counter = Counter(value: [counterName, initialCount])
+        var counter = Counter(value: [counterName, initialCount])
         let realm = try! Realm()
         try! realm.write {
+            counter.historyEntries.append(createHistoryEntry(countValue: counter.count))
             realm.add(counter)
         }
     }
@@ -45,6 +46,9 @@ class CountersManager {
         let realm = try! Realm()
         try! realm.write {
             counter.counterName = counterName
+            if counter.count != count {
+                counter.historyEntries.append(createHistoryEntry(countValue: counter.count))
+            }
             counter.count = count
             counter.counterNotes = notes
             counter.step = step
@@ -70,6 +74,8 @@ class CountersManager {
         let realm = try! Realm()
         try! realm.write {
             counter.count -= counter.step
+            counter.historyEntries.append(createHistoryEntry(countValue: counter.count))
+            debugPrint(counter.historyEntries.count)
         }
     }
     
@@ -84,6 +90,7 @@ class CountersManager {
         let realm = try! Realm()
         try! realm.write {
             counter.count += counter.step
+            counter.historyEntries.append(createHistoryEntry(countValue: counter.count))
         }
     }
     
@@ -106,11 +113,18 @@ class CountersManager {
         createCounter(counterName: "Days without smoking", initialCount: 39)
     }
     
+    
     func resetCounter(counter: inout Counter, completionHandler: () -> Void) {
         let realm = try! Realm()
         try! realm.write {
             counter.count = 0
+            counter.historyEntries.append(createHistoryEntry(countValue: counter.count))
             completionHandler()
         }
+    }
+    
+    
+    func createHistoryEntry(countValue: Int) -> HistoryEntry  {
+        return HistoryEntry(value: [NSDate(),countValue])
     }
 }

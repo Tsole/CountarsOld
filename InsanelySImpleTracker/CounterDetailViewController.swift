@@ -109,6 +109,23 @@ class CounterDetailViewController: UITableViewController {
         dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
         self.textView.text.append(dateFormatter.string(from:currentDate))
     }
+    
+    
+    @IBAction func didPressShowHistoryButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "showHistory", sender: nil)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showHistory" {
+            var historyTVC = segue.destination as! HistoryTVC
+            guard let historyEntries = counter?.historyEntries else {
+                return
+            }
+            historyTVC.histroyEntries = Array(historyEntries)
+        }
+    }
+    
 }
 
 extension CounterDetailViewController: UITextViewDelegate {
