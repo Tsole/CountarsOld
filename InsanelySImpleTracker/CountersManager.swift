@@ -22,7 +22,7 @@ class CountersManager {
     
     
     func createCounter(counterName: String, initialCount: Int) {
-        var counter = Counter(value: [counterName, initialCount])
+        let counter = Counter(value: [counterName, initialCount])
         let realm = try! Realm()
         try! realm.write {
             counter.historyEntries.append(createHistoryEntry(countValue: counter.count))
@@ -47,7 +47,7 @@ class CountersManager {
         try! realm.write {
             counter.counterName = counterName
             if counter.count != count {
-                counter.historyEntries.append(createHistoryEntry(countValue: counter.count))
+                counter.historyEntries.append(createHistoryEntry(countValue: count))
             }
             counter.count = count
             counter.counterNotes = notes
