@@ -26,6 +26,7 @@
 		ACC73BC61E2A446800B12544 /* CounterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC73BC51E2A446800B12544 /* CounterCell.swift */; };
 		ACD4067B1EC1FBA900DE08A3 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4067A1EC1FBA900DE08A3 /* Counter.swift */; };
 		ACD4067D1EC20D3F00DE08A3 /* CountersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD4067C1EC20D3F00DE08A3 /* CountersManager.swift */; };
+		EE14C7DE230A803A6F1380D6 /* Pods_Countars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACD0FE1AA386FA2FB2928B7 /* Pods_Countars.framework */; };
 		F64761E465AB1EB389B707B3 /* Pods_InsanelySImpleTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28F70B50EA2B31708FBF953 /* Pods_InsanelySImpleTrackerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACBF38E01EFEDCD500FEDD2A /* RealmSwift.framework in Frameworks */,
+				EE14C7DE230A803A6F1380D6 /* Pods_Countars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
