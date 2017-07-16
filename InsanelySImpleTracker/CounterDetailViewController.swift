@@ -122,11 +122,11 @@ class CounterDetailViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showHistory" {
-            var historyTVC = segue.destination as! HistoryTVC
+            let historyTVC = segue.destination as! HistoryVC
             guard let historyEntries = counter?.historyEntries else {
                 return
             }
-            historyTVC.histroyEntries = Array(historyEntries)
+            historyTVC.historyEntries = Array(historyEntries)
         }
     }
 

@@ -10,7 +10,7 @@
 		4896CDFBD2A2C7EA2388E203 /* Pods_InsanelySImpleTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F7CBF594B09BDB454FDBFB /* Pods_InsanelySImpleTrackerUITests.framework */; };
 		AC0B21B51ED5A702003B0C68 /* RoundedRectUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B41ED5A702003B0C68 /* RoundedRectUIButton.swift */; };
 		AC0B21B71ED5BD08003B0C68 /* CounterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B61ED5BD08003B0C68 /* CounterDetailViewController.swift */; };
-		AC4D1A861EFD5EE30072D979 /* HistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4D1A851EFD5EE30072D979 /* HistoryTVC.swift */; };
+		AC4D1A861EFD5EE30072D979 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4D1A851EFD5EE30072D979 /* HistoryVC.swift */; };
 		AC59ECA11EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */; };
 		AC5B98341EF965B50069F26D /* HistoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B98331EF965B50069F26D /* HistoryEntry.swift */; };
 		AC99A7B41EDEB0BC007A82C0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */; };
@@ -57,7 +57,7 @@
 		AC0B21B61ED5BD08003B0C68 /* CounterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterDetailViewController.swift; sourceTree = "<group>"; };
 		AC314DF81EC4BE390093C746 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Library/Developer/Xcode/DerivedData/InsanelySImpleTracker-aqonqgpphcftopgnesergsfqeyji/Build/Products/Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = "<group>"; };
 		AC314DF91EC4BE390093C746 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/InsanelySImpleTracker-aqonqgpphcftopgnesergsfqeyji/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
-		AC4D1A851EFD5EE30072D979 /* HistoryTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTVC.swift; sourceTree = "<group>"; };
+		AC4D1A851EFD5EE30072D979 /* HistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		AC5941111EFED7650015330A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../Library/Developer/Xcode/DerivedData/Countars-hkgpoasutnmbxbbewdilkeftdkks/Build/Products/Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = "<group>"; };
 		AC5941131EFED76C0015330A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../Library/Developer/Xcode/DerivedData/Countars-hkgpoasutnmbxbbewdilkeftdkks/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
 		AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+KeyboardExtension.swift"; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 			children = (
 				ACC73B991E29610200B12544 /* MainViewController.swift */,
 				AC0B21B61ED5BD08003B0C68 /* CounterDetailViewController.swift */,
-				AC4D1A851EFD5EE30072D979 /* HistoryTVC.swift */,
+				AC4D1A851EFD5EE30072D979 /* HistoryVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -525,7 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC4D1A861EFD5EE30072D979 /* HistoryTVC.swift in Sources */,
+				AC4D1A861EFD5EE30072D979 /* HistoryVC.swift in Sources */,
 				ACD4067B1EC1FBA900DE08A3 /* Counter.swift in Sources */,
 				ACBF38E21EFFE83E00FEDD2A /* CachedDateFormatter.swift in Sources */,
 				AC5B98341EF965B50069F26D /* HistoryEntry.swift in Sources */,

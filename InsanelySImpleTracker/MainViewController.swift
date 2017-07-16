@@ -139,7 +139,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        debugPrint("did select row at indexPath: " + String(describing: indexPath))
+//        debugPrint("did select row at indexPath: " + String(describing: indexPath))
     }
 
 

@@ -9,6 +9,12 @@
 import Foundation
 class CachedDateFormatter {
 
+    static let monthYearFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM - YYYY"
+        return dateFormatter
+    }()
+    
     static let dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
