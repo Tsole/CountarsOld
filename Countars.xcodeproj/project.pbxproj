@@ -14,6 +14,7 @@
 		AC59ECA11EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */; };
 		AC5B98341EF965B50069F26D /* HistoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B98331EF965B50069F26D /* HistoryEntry.swift */; };
 		AC99A7B41EDEB0BC007A82C0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */; };
+		ACA64B0F1F1BE0320074B8CE /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA64B0E1F1BE0320074B8CE /* NotesViewController.swift */; };
 		ACBF38E01EFEDCD500FEDD2A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACBF38DF1EFEDCD500FEDD2A /* RealmSwift.framework */; };
 		ACBF38E21EFFE83E00FEDD2A /* CachedDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBF38E11EFFE83E00FEDD2A /* CachedDateFormatter.swift */; };
 		ACC73B981E29610200B12544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC73B971E29610200B12544 /* AppDelegate.swift */; };
@@ -63,6 +64,7 @@
 		AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+KeyboardExtension.swift"; sourceTree = "<group>"; };
 		AC5B98331EF965B50069F26D /* HistoryEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryEntry.swift; sourceTree = "<group>"; };
 		AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		ACA64B0E1F1BE0320074B8CE /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		ACBF38DF1EFEDCD500FEDD2A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
 		ACBF38E11EFFE83E00FEDD2A /* CachedDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedDateFormatter.swift; sourceTree = "<group>"; };
 		ACC73B941E29610200B12544 /* Countars: Insanely Simple Trackers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Countars: Insanely Simple Trackers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 			children = (
 				ACC73B991E29610200B12544 /* MainViewController.swift */,
 				AC0B21B61ED5BD08003B0C68 /* CounterDetailViewController.swift */,
+				ACA64B0E1F1BE0320074B8CE /* NotesViewController.swift */,
 				AC4D1A851EFD5EE30072D979 /* HistoryTVC.swift */,
 			);
 			name = ViewControllers;
@@ -151,14 +154,14 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		AC3B7F571EEF068700353ABC /* PersistentLayer */ = {
+		AC3B7F571EEF068700353ABC /* PersistencytLayer */ = {
 			isa = PBXGroup;
 			children = (
 				ACD4067C1EC20D3F00DE08A3 /* CountersManager.swift */,
 				ACD4067A1EC1FBA900DE08A3 /* Counter.swift */,
 				AC5B98331EF965B50069F26D /* HistoryEntry.swift */,
 			);
-			name = PersistentLayer;
+			name = PersistencytLayer;
 			sourceTree = "<group>";
 		};
 		ACBF38E31EFFE84600FEDD2A /* Utilities */ = {
@@ -198,7 +201,7 @@
 				ACC73B971E29610200B12544 /* AppDelegate.swift */,
 				AC3B7F561EEF02B700353ABC /* Extensions */,
 				AC3B7F551EEF029500353ABC /* ViewControllers */,
-				AC3B7F571EEF068700353ABC /* PersistentLayer */,
+				AC3B7F571EEF068700353ABC /* PersistencytLayer */,
 				ACC73BC51E2A446800B12544 /* CounterCell.swift */,
 				ACBF38E31EFFE84600FEDD2A /* Utilities */,
 				ACC73B9B1E29610200B12544 /* Main.storyboard */,
@@ -532,6 +535,7 @@
 				ACC73BC61E2A446800B12544 /* CounterCell.swift in Sources */,
 				AC0B21B71ED5BD08003B0C68 /* CounterDetailViewController.swift in Sources */,
 				ACD4067D1EC20D3F00DE08A3 /* CountersManager.swift in Sources */,
+				ACA64B0F1F1BE0320074B8CE /* NotesViewController.swift in Sources */,
 				AC0B21B51ED5A702003B0C68 /* RoundedRectUIButton.swift in Sources */,
 				AC59ECA11EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift in Sources */,
 				ACC73B9A1E29610200B12544 /* MainViewController.swift in Sources */,

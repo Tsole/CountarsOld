@@ -31,7 +31,7 @@ class CountersManager {
     }
     
     
-    func updateCounter(counter: inout Counter, counterName: String, count: Int, notes: String, step: Int) {
+    func updateCounter(counter: inout Counter, counterName: String, count: Int, step: Int) {
 
         guard count <= CounterConstants.maxCounterValue else {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "maxValue"), object: nil, userInfo: nil)
@@ -50,8 +50,15 @@ class CountersManager {
                 counter.historyEntries.append(createHistoryEntry(countValue: count))
             }
             counter.count = count
-            counter.counterNotes = notes
             counter.step = step
+        }
+    }
+    
+    
+    func updateCounterNotes(counter: inout Counter, notes: String) {
+        let realm = try! Realm()
+        try! realm.write {
+            counter.counterNotes = notes
         }
     }
     
