@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4896CDFBD2A2C7EA2388E203 /* Pods_InsanelySImpleTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F7CBF594B09BDB454FDBFB /* Pods_InsanelySImpleTrackerUITests.framework */; };
+		4C3E47817312C121BE9E27BB /* Pods_Countars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACD0FE1AA386FA2FB2928B7 /* Pods_Countars.framework */; };
 		AC0B21B51ED5A702003B0C68 /* RoundedRectUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B41ED5A702003B0C68 /* RoundedRectUIButton.swift */; };
 		AC0B21B71ED5BD08003B0C68 /* CounterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B21B61ED5BD08003B0C68 /* CounterDetailViewController.swift */; };
 		AC4D1A861EFD5EE30072D979 /* HistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4D1A851EFD5EE30072D979 /* HistoryTVC.swift */; };
@@ -97,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACBF38E01EFEDCD500FEDD2A /* RealmSwift.framework in Frameworks */,
+				4C3E47817312C121BE9E27BB /* Pods_Countars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

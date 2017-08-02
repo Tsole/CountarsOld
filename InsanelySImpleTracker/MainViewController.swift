@@ -51,6 +51,7 @@ class ViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailsCounter" {
+            self.navigationItem.title = ""
             if let destinationVC = segue.destination as? CounterDetailViewController {
                 let counterSelected = countersManager.counters[(tableView.indexPathForSelectedRow?.row)!]
                 destinationVC.counter = counterSelected
@@ -106,6 +107,10 @@ class ViewController: UIViewController {
 
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "My Counters"
     }
 
     override func viewDidAppear(_ animated: Bool) {

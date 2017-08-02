@@ -7,6 +7,7 @@ target 'Countars' do
 
   # Pods for InsanelySImpleTracker
   pod 'RealmSwift'
+  pod 'DateToolsSwift'
   
 
   target 'InsanelySImpleTrackerTests' do

@@ -45,7 +45,7 @@ class NotesViewController: UIViewController {
         textView.inputAccessoryView = doneAndDateToolbar
     }
     
-    //scroll for textview in rder show keyboard
+    //scroll for textview in order to show keyboard
     func adjustForKeyboard(notification: Notification) {
         let userInfo = notification.userInfo!
         
@@ -68,7 +68,6 @@ class NotesViewController: UIViewController {
     
     func didPressAddDateButton() {
         self.textView.text.append(CachedDateFormatter.dateFormatter.string(from:Date()))
-
     }
     
     
@@ -76,6 +75,8 @@ class NotesViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 }
 
 
