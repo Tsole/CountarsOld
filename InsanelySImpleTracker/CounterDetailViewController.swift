@@ -14,39 +14,72 @@ class CounterDetailViewController: UITableViewController {
     @IBOutlet weak var renameTextField: UITextField!
     @IBOutlet weak var countTextfield: UITextField!
     @IBOutlet weak var stepTextField: UITextField!
+    @IBOutlet weak var reminderSwitch: UISwitch!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var repeatLabel: UILabel!
     
     var counter: Counter?
-    var reminderCellsHidden = true
-    let dateFormatter = DateFormatter()
+    var launchedFromNotification = false
     
-    @IBOutlet weak var dateTextField: UITextField!
+    var reminderCellsHidden: Bool {
+        guard let counter = counter else {
+            return false
+        }
+        return !counter.hasReminder
+    }
+    
+    let dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         self.addDoneButtonOnKeyboard()
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 50 // or something
         
+        setUpUI()
+        
+        let doneButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.dismiss(animated:completion:)))
+        if launchedFromNotification {
+            self.navigationItem.leftBarButtonItem = doneButton
+        }
+        
+        let resetButton = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(self.resetCounter))
+        self.navigationItem.rightBarButtonItem = resetButton
+        
+    }
+    
+    
+    func setUpUI() {
+        
         guard let counter = counter else {
             return
         }
         
-        renameTextField.text = counter.counterName
+        if reminderCellsHidden {
+            reminderSwitch.isOn = false
+        } else {
+            reminderSwitch.isOn = true
+        }
+        
         navigationItem.title = counter.counterName
+        
+        renameTextField.text = counter.counterName
         countTextfield.text = String(describing: counter.count)
         stepTextField.text = String(describing: counter.step)
+        
         dateTextField.delegate = self
+        countTextfield.delegate = self
+        stepTextField.delegate = self
+        renameTextField.delegate = self
         
         dateFormatter.dateFormat = "EEE, MMM d, yyyy HH:mm"
         
-        let daterAfter1Hour = Date().add(1.hours)
-        dateTextField.text = dateFormatter.string(from: daterAfter1Hour)
+        dateTextField.text = dateFormatter.string(from: Date())
+        repeatLabel.text = RepeatIntervall.descriptionBasedOnInt(int: counter.repeatIntervall)
         
-        let resetButton = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(self.resetCounter))
-        self.navigationItem.rightBarButtonItem = resetButton
+        tableView.reloadData()
     }
     
     
@@ -60,21 +93,18 @@ class CounterDetailViewController: UITableViewController {
     }
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setUpUI), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidLoad()
+        self.setUpUI()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
-        guard var counter = counter else {
-            return
-        }
-        
-        if countTextfield.text?.characters.count == 0 {
-            countTextfield.text = counter.counterName
-        }
-        
-        if stepTextField.text?.characters.count == 0 {
-            stepTextField.text = String(counter.step)
-        }
-        
-        //TODO: better handling of force unwrapping
-        CountersManager.sharedInstance.updateCounter(counter: &counter, counterName: renameTextField.text!, count: Int(countTextfield.text!)!, step: Int(stepTextField.text!)!)
+        super.viewWillDisappear(true)
+        self.view.resignFirstResponder()
     }
     
     
@@ -87,21 +117,19 @@ class CounterDetailViewController: UITableViewController {
     
     @IBAction func didCickRemindMeSwitch(_ sender: UISwitch) {
         if sender.isOn {
-            reminderCellsHidden = false
+            CountersManager.sharedInstance.updateReminderStatus(hasReminder: true, counter: &counter!)
             tableView.reloadData()
         } else {
-            reminderCellsHidden = true
+            CountersManager.sharedInstance.updateReminderStatus(hasReminder: false, counter: &counter!)
             tableView.reloadData()
         }
     }
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         if indexPath.section == 1 && indexPath.row != 0 && reminderCellsHidden {
             return 0
         }
-        
         return UITableViewAutomaticDimension
     }
     
@@ -146,6 +174,14 @@ class CounterDetailViewController: UITableViewController {
             }
             notesVC.counter = counter
         }
+        
+        if segue.identifier == "showRepeatVC" {
+            let repeatVC = segue.destination as! RepeatVC
+            guard let counter = counter else {
+                return
+            }
+            repeatVC.counter = counter
+        }
     }
     
     
@@ -159,6 +195,10 @@ class CounterDetailViewController: UITableViewController {
         if selectedCell?.reuseIdentifier == "showHistory" {
             self.performSegue(withIdentifier: "showHistory", sender: nil)
         }
+        
+        if selectedCell?.reuseIdentifier == "showRepeatVC" {
+            self.performSegue(withIdentifier: "showRepeatVC", sender: nil)
+        }
     }
 }
 
@@ -166,11 +206,29 @@ class CounterDetailViewController: UITableViewController {
 extension CounterDetailViewController : UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        guard var counter = counter else {
+            return
+        }
+        
         if textField == dateTextField {
             dateTextField.textColor = UIColor.lightGray
+            let delegate = UIApplication.shared.delegate as? AppDelegate
+            let selectedDate = dateFormatter.date(from: dateTextField.text!)
+            delegate?.scheduleNotification(at: selectedDate!, counter: counter)
         }
+        
+        if countTextfield.text?.characters.count == 0 {
+            countTextfield.text = String(describing:counter.count)
+        }
+        
+        if stepTextField.text?.characters.count == 0 {
+            stepTextField.text = String(describing: counter.step)
+        }
+        
+        //TODO: better handling of force unwrapping
+        CountersManager.sharedInstance.updateCounter(counter: &counter, counterName: renameTextField.text!, count: Int(countTextfield.text!)!, step: Int(stepTextField.text!)!)
     }
-    
 }
 
 

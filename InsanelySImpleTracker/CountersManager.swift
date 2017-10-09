@@ -131,6 +131,22 @@ class CountersManager {
     }
     
     
+    func updateReminderStatus(hasReminder: Bool, counter: inout Counter) {
+        let realm = try! Realm()
+        try! realm.write {
+            counter.hasReminder = hasReminder
+        }
+    }
+    
+    
+    func updateRepeatInterval(repeatInterval: Int, counter: inout Counter) {
+        let realm = try! Realm()
+        try! realm.write {
+            counter.repeatIntervall = repeatInterval
+        }
+    }
+    
+    
     func createHistoryEntry(countValue: Int) -> HistoryEntry  {
         return HistoryEntry(value: [NSDate(),countValue])
     }

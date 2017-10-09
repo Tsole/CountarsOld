@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,26 +21,85 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //MARK: Realm Migration block
         let config = Realm.Configuration(
-            schemaVersion: 9,
+            schemaVersion: 12,
             migrationBlock: { migration, oldSchemaVersion in
+                
                 if (oldSchemaVersion < 7) {
                     migration.enumerateObjects(ofType: Counter.className()) { oldObject, newObject in
                         newObject!["step"] = 1
                     }
                 }
+                
                 if (oldSchemaVersion < 9) {
                     migration.enumerateObjects(ofType: Counter.className()) { oldObject, newObject in
                         newObject!["historyEntries"] = []
                     }
                 }
+                
+                if (oldSchemaVersion < 10) {
+                    migration.enumerateObjects(ofType: Counter.className()) { oldObject, newObject in
+                        newObject!["repeatIntervall"] = 0
+                    }
+                }
+                
+                if (oldSchemaVersion < 12) {
+                    migration.enumerateObjects(ofType: Counter.className()) { oldObject, newObject in
+                        newObject!["hasReminder"] = false
+                        newObject!["reminderDate"] = nil
+                    }
+                }
+                
         })
         
         // Tell Realm to use this new configuration object for the default Realm
         Realm.Configuration.defaultConfiguration = config
-        let realm = try! Realm()
+        _ = try! Realm()
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
+            if !accepted {
+                print("Notification access denied.")
+            }
+        }
+        
+        let openCounterAction = UNNotificationAction(identifier: "openCounter", title: "Edit Counter", options: [.foreground])
+        let resetAction = UNNotificationAction(identifier: "resetCounter", title: "Reset Counter", options: [.destructive])
+        
+        let category = UNNotificationCategory(identifier: "myCategory", actions: [openCounterAction, resetAction], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
         
         return true
     }
+    
+    
+    func scheduleNotification(at date: Date, counter: Counter) {
+        
+        UNUserNotificationCenter.current().delegate = self
+        
+        //create a trigger
+        let calendar = Calendar(identifier: .gregorian)
+        let components = calendar.dateComponents(in: .current, from: date)
+        let newComponents = DateComponents(calendar: calendar, timeZone: .current, month: components.month, day: components.day, hour: components.hour, minute: components.minute)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: true)
+        
+        //create the content
+        let content = UNMutableNotificationContent()
+        content.title = counter.counterName
+        content.body = "The current value of: " + counter.counterName + " is " + String(describing: counter.count) + ". Do you want to update its value or reset it ?"
+        content.sound = UNNotificationSound.default()
+        content.categoryIdentifier = "myCategory"
+        
+        //request to show usernotification
+        let request = UNNotificationRequest(identifier: counter.counterID, content: content, trigger: trigger)
+        
+        //add the request in the userNotificationCenter
+        UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: [counter.counterName])
+        UNUserNotificationCenter.current().add(request) {(error) in
+            if let error = error {
+                print("Uh oh! We had an error: \(error)")
+            }
+        }
+    }
+    
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -62,7 +122,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    
 }
+
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        if response.actionIdentifier == "resetCounter" {
+            debugPrint(response.notification)
+            let realm = try! Realm()
+            var counterToReset = realm.object(ofType: Counter.self, forPrimaryKey: response.notification.request.identifier)
+            if counterToReset != nil {
+                CountersManager.sharedInstance.resetCounter(counter: &counterToReset!, completionHandler: {
+                })
+            } else {
+                return
+            }
+        }
+        
+        if response.actionIdentifier == "openCounter" {
+            debugPrint(response.notification)
+            let realm = try! Realm()
+            let counterToOpen = realm.object(ofType: Counter.self, forPrimaryKey: response.notification.request.identifier)
+            let sb = UIStoryboard(name: "CounterDetails", bundle: nil)
+            let counterDetailsVC = sb.instantiateViewController(withIdentifier: "CounterDetails") as! CounterDetailViewController
+            counterDetailsVC.launchedFromNotification = true
+            let navController = UINavigationController(rootViewController: counterDetailsVC)
+            counterDetailsVC.counter = counterToOpen
+            window?.rootViewController = navController
+        }
+        
+        completionHandler()
+    }
+    
+    //necessary to display the notification inside the App
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler(UNNotificationPresentationOptions.alert)
+    }
+}
+
 

@@ -109,12 +109,38 @@ class ViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         self.navigationItem.title = "My Counters"
+         NotificationCenter.default.addObserver(self, selector: #selector(self.willEnterForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
     }
-
-    override func viewDidAppear(_ animated: Bool) {
+    
+    
+    func willEnterForeground() {
         tableView.reloadData()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        tableView.reloadData()
+    }
+    
+    
+    func maxValueAlert() {
+        let alertController = UIAlertController(title: "Maximum value reached!", message: "You have reached the maximum possible number for a counter, and can not increase it anymore", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { action in}
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true) {}
+    }
+    
+    
+    func minValueAlert() {
+        let alertController = UIAlertController(title: "Minimum value reached!", message: "You have reached the minimum possible number for a counter, and can not decreases it anymore", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { action in}
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true) {}
     }
 }
 
@@ -161,23 +187,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             })
         }
     }
-
-
-    func maxValueAlert() {
-        let alertController = UIAlertController(title: "Maximum value reached!", message: "You have reached the maximum possible number for a counter, and can not increase it anymore", preferredStyle: .alert)
-        let OKAction = UIAlertAction(title: "OK", style: .default) { action in}
-        alertController.addAction(OKAction)
-        self.present(alertController, animated: true) {}
-    }
-
-    
-    func minValueAlert() {
-        let alertController = UIAlertController(title: "Minimum value reached!", message: "You have reached the minimum possible number for a counter, and can not decreases it anymore", preferredStyle: .alert)
-        let OKAction = UIAlertAction(title: "OK", style: .default) { action in}
-        alertController.addAction(OKAction)
-        self.present(alertController, animated: true) {}
-    }
-    
 }
 
 

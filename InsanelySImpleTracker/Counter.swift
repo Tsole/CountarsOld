@@ -22,6 +22,9 @@ class Counter: Object {
     dynamic var creationDate = NSDate()
     dynamic var counterNotes = ""
     dynamic var step = 1
+    dynamic var repeatIntervall = RepeatIntervall.never.rawValue
+    dynamic var hasReminder = false
+    dynamic var reminderDate: NSDate?
     
     var historyEntries = List<HistoryEntry>()
         

@@ -14,6 +14,8 @@
 		AC4D1A861EFD5EE30072D979 /* HistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4D1A851EFD5EE30072D979 /* HistoryTVC.swift */; };
 		AC59ECA11EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */; };
 		AC5B98341EF965B50069F26D /* HistoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B98331EF965B50069F26D /* HistoryEntry.swift */; };
+		AC875FEA1F34A5ED0017D3D8 /* CounterDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC875FE91F34A5ED0017D3D8 /* CounterDetails.storyboard */; };
+		AC875FEC1F38A2630017D3D8 /* RepeatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC875FEB1F38A2630017D3D8 /* RepeatVC.swift */; };
 		AC99A7B41EDEB0BC007A82C0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */; };
 		ACA64B0F1F1BE0320074B8CE /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA64B0E1F1BE0320074B8CE /* NotesViewController.swift */; };
 		ACBF38E01EFEDCD500FEDD2A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACBF38DF1EFEDCD500FEDD2A /* RealmSwift.framework */; };
@@ -64,6 +66,8 @@
 		AC5941131EFED76C0015330A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../Library/Developer/Xcode/DerivedData/Countars-hkgpoasutnmbxbbewdilkeftdkks/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
 		AC59ECA01EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+KeyboardExtension.swift"; sourceTree = "<group>"; };
 		AC5B98331EF965B50069F26D /* HistoryEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryEntry.swift; sourceTree = "<group>"; };
+		AC875FE91F34A5ED0017D3D8 /* CounterDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CounterDetails.storyboard; sourceTree = "<group>"; };
+		AC875FEB1F38A2630017D3D8 /* RepeatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatVC.swift; sourceTree = "<group>"; };
 		AC99A7B31EDEB0BC007A82C0 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		ACA64B0E1F1BE0320074B8CE /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		ACBF38DF1EFEDCD500FEDD2A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				AC0B21B61ED5BD08003B0C68 /* CounterDetailViewController.swift */,
 				ACA64B0E1F1BE0320074B8CE /* NotesViewController.swift */,
 				AC4D1A851EFD5EE30072D979 /* HistoryTVC.swift */,
+				AC875FEB1F38A2630017D3D8 /* RepeatVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -164,6 +169,15 @@
 				AC5B98331EF965B50069F26D /* HistoryEntry.swift */,
 			);
 			name = PersistencytLayer;
+			sourceTree = "<group>";
+		};
+		AC875FE81F34A5C20017D3D8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ACC73B9B1E29610200B12544 /* Main.storyboard */,
+				AC875FE91F34A5ED0017D3D8 /* CounterDetails.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		ACBF38E31EFFE84600FEDD2A /* Utilities */ = {
@@ -206,7 +220,7 @@
 				AC3B7F571EEF068700353ABC /* PersistencytLayer */,
 				ACC73BC51E2A446800B12544 /* CounterCell.swift */,
 				ACBF38E31EFFE84600FEDD2A /* Utilities */,
-				ACC73B9B1E29610200B12544 /* Main.storyboard */,
+				AC875FE81F34A5C20017D3D8 /* Storyboards */,
 				ACC73B9E1E29610200B12544 /* Assets.xcassets */,
 				ACC73BA01E29610200B12544 /* LaunchScreen.storyboard */,
 				ACC73BA31E29610200B12544 /* Info.plist */,
@@ -365,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC875FEA1F34A5ED0017D3D8 /* CounterDetails.storyboard in Resources */,
 				ACC73BA21E29610200B12544 /* LaunchScreen.storyboard in Resources */,
 				ACC73B9F1E29610200B12544 /* Assets.xcassets in Resources */,
 				ACC73B9D1E29610200B12544 /* Main.storyboard in Resources */,
@@ -539,6 +554,7 @@
 				ACD4067D1EC20D3F00DE08A3 /* CountersManager.swift in Sources */,
 				ACA64B0F1F1BE0320074B8CE /* NotesViewController.swift in Sources */,
 				AC0B21B51ED5A702003B0C68 /* RoundedRectUIButton.swift in Sources */,
+				AC875FEC1F38A2630017D3D8 /* RepeatVC.swift in Sources */,
 				AC59ECA11EE8FB32001C4F07 /* UIToolbar+KeyboardExtension.swift in Sources */,
 				ACC73B9A1E29610200B12544 /* MainViewController.swift in Sources */,
 				AC99A7B41EDEB0BC007A82C0 /* String+Extension.swift in Sources */,
