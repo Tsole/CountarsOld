@@ -51,7 +51,7 @@ class CounterDetailViewController: UITableViewController {
     }
     
     
-    func setUpUI() {
+    @objc func setUpUI() {
         
         guard let counter = counter else {
             return
@@ -83,7 +83,7 @@ class CounterDetailViewController: UITableViewController {
     }
     
     
-    func resetCounter() {
+    @objc func resetCounter() {
         guard var counter = counter else {
             return
         }
@@ -144,7 +144,7 @@ class CounterDetailViewController: UITableViewController {
     }
     
     
-    func datePickerValueChanged(sender:UIDatePicker) {
+    @objc func datePickerValueChanged(sender:UIDatePicker) {
         dateTextField.text = dateFormatter.string(from: sender.date)
     }
     

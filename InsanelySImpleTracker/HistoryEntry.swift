@@ -11,7 +11,7 @@ import RealmSwift
 
 class HistoryEntry: Object {
     
-    dynamic var date = NSDate()
-    dynamic var counterValue: Int = 0
+    @objc dynamic var date = NSDate()
+    @objc dynamic var counterValue: Int = 0
     
 }

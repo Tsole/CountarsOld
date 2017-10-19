@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     }
 
 
-    func showEditing(sender: UIBarButtonItem) {
+    @objc func showEditing(sender: UIBarButtonItem) {
         if (self.tableView.isEditing == true) {
             self.tableView.isEditing = false
             self.navigationItem.leftBarButtonItem?.title = "Edit"
@@ -100,7 +100,7 @@ class ViewController: UIViewController {
     }
 
 
-    func textChanged(_ sender:UITextField) {
+    @objc func textChanged(_ sender:UITextField) {
         self.actionToEnable?.isEnabled  = (sender.text!.characters.count > 0)
     }
 
@@ -117,7 +117,7 @@ class ViewController: UIViewController {
     }
     
     
-    func willEnterForeground() {
+    @objc func willEnterForeground() {
         tableView.reloadData()
     }
     
@@ -128,7 +128,7 @@ class ViewController: UIViewController {
     }
     
     
-    func maxValueAlert() {
+    @objc func maxValueAlert() {
         let alertController = UIAlertController(title: "Maximum value reached!", message: "You have reached the maximum possible number for a counter, and can not increase it anymore", preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default) { action in}
         alertController.addAction(OKAction)
@@ -136,7 +136,7 @@ class ViewController: UIViewController {
     }
     
     
-    func minValueAlert() {
+    @objc func minValueAlert() {
         let alertController = UIAlertController(title: "Minimum value reached!", message: "You have reached the minimum possible number for a counter, and can not decreases it anymore", preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default) { action in}
         alertController.addAction(OKAction)

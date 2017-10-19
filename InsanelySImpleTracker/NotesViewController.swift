@@ -46,7 +46,7 @@ class NotesViewController: UIViewController {
     }
     
     //scroll for textview in order to show keyboard
-    func adjustForKeyboard(notification: Notification) {
+    @objc func adjustForKeyboard(notification: Notification) {
         let userInfo = notification.userInfo!
         
         let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
@@ -66,7 +66,7 @@ class NotesViewController: UIViewController {
     }
     
     
-    func didPressAddDateButton() {
+    @objc func didPressAddDateButton() {
         self.textView.text.append(CachedDateFormatter.dateFormatter.string(from:Date()))
     }
     

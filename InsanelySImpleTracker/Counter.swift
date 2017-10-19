@@ -16,15 +16,15 @@ enum CounterConstants {
 
 class Counter: Object {
     
-    dynamic var counterName = ""
-    dynamic var count: Int = 0
-    dynamic var counterID = UUID().uuidString
-    dynamic var creationDate = NSDate()
-    dynamic var counterNotes = ""
-    dynamic var step = 1
-    dynamic var repeatIntervall = RepeatIntervall.never.rawValue
-    dynamic var hasReminder = false
-    dynamic var reminderDate: NSDate?
+    @objc dynamic var counterName = ""
+    @objc dynamic var count: Int = 0
+    @objc dynamic var counterID = UUID().uuidString
+    @objc dynamic var creationDate = NSDate()
+    @objc dynamic var counterNotes = ""
+    @objc dynamic var step = 1
+    @objc dynamic var repeatIntervall = RepeatIntervall.never.rawValue
+    @objc dynamic var hasReminder = false
+    @objc dynamic var reminderDate: NSDate?
     
     var historyEntries = List<HistoryEntry>()
         
