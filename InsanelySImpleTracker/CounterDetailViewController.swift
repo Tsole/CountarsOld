@@ -84,11 +84,11 @@ class CounterDetailViewController: UITableViewController {
     
     
     @objc func resetCounter() {
-        guard var counter = counter else {
+        guard let localCounter = counter else {
             return
         }
-        CountersManager.sharedInstance.resetCounter(counter: &counter) {
-            countTextfield.text = String(describing: counter.count)
+        CountersManager.sharedInstance.resetCounter(counter: &counter!) {
+            countTextfield.text = String(localCounter.count)
         }
     }
     
