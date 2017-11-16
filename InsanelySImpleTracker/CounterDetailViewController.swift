@@ -51,7 +51,7 @@ class CounterDetailViewController: UITableViewController {
     
     @objc func didClickDoneButton() {
         let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
-        self.present(mainVC!, animated:true, completion: nil)
+        self.present(mainVC, animated: true, completion: nil)
     }
     
     @objc func setUpUI() {

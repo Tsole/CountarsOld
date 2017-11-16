@@ -140,19 +140,19 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             }
         }
         
-        if response.actionIdentifier == "openCounter" {
+//        if response.actionIdentifier == "openCounter" {
             debugPrint(response.notification)
             let realm = try! Realm()
             let counterToOpen = realm.object(ofType: Counter.self, forPrimaryKey: response.notification.request.identifier)
-            let sb = UIStoryboard(name: "CounterDetails", bundle: nil)
-            let counterDetailsVC = sb.instantiateViewController(withIdentifier: "CounterDetails") as! CounterDetailViewController
+            let storyboard = UIStoryboard(name: "CounterDetails", bundle: nil)
+            let counterDetailsVC = storyboard.instantiateViewController(withIdentifier: "CounterDetails") as! CounterDetailViewController
             counterDetailsVC.launchedFromNotification = true
             let navController = UINavigationController(rootViewController: counterDetailsVC)
             counterDetailsVC.counter = counterToOpen
             window?.rootViewController = navController
-        }
+//        }
         
-        completionHandler()
+//        completionHandler()
     }
     
     //necessary to display the notification inside the App
