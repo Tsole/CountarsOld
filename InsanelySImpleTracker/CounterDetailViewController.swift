@@ -40,16 +40,19 @@ class CounterDetailViewController: UITableViewController {
         
         setUpUI()
         
-        let doneButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.dismiss(animated:completion:)))
+        let doneButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.didClickDoneButton))
         if launchedFromNotification {
             self.navigationItem.leftBarButtonItem = doneButton
         }
         
         let resetButton = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(self.resetCounter))
         self.navigationItem.rightBarButtonItem = resetButton
-        
     }
     
+    @objc func didClickDoneButton() {
+        let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        self.present(mainVC!, animated:true, completion: nil)
+    }
     
     @objc func setUpUI() {
         
@@ -92,7 +95,6 @@ class CounterDetailViewController: UITableViewController {
         }
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(self.setUpUI), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
     }
@@ -107,13 +109,11 @@ class CounterDetailViewController: UITableViewController {
         self.view.resignFirstResponder()
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         viewWillDisappear(true)
     }
-    
     
     @IBAction func didCickRemindMeSwitch(_ sender: UISwitch) {
         if sender.isOn {

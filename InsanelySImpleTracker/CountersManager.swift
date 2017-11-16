@@ -13,13 +13,11 @@ class CountersManager {
     
     static let sharedInstance = CountersManager()
     
-    
     var counters: [Counter] {
         let realm = try! Realm()
         let counters = realm.objects(Counter.self)
         return Array(counters.sorted(byKeyPath: "creationDate", ascending: false))
     }
-    
     
     func createCounter(counterName: String, initialCount: Int) {
         let counter = Counter(value: [counterName, initialCount])
@@ -29,7 +27,6 @@ class CountersManager {
             realm.add(counter)
         }
     }
-    
     
     func updateCounter(counter: inout Counter, counterName: String, count: Int, step: Int) {
 
